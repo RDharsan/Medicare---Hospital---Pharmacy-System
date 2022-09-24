@@ -1,0 +1,29 @@
+.secondNav{
+    list-style-type: none;
+    margin-top: -20px;
+    padding: 0;
+    overflow: hidden;
+    background-color:#eeeeee;
+    margin-left: 0px;
+  }
+
+  
+.list{
+    float: left;
+    margin-left: 150px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    
+  }
+
+.list:hover{
+    background-color: #198754; /* Green */
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.2s;
+
+}
