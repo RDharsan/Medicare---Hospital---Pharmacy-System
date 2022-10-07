@@ -29,8 +29,8 @@ include '../connection/connect.php';
     <div>
         <ul class="secondNav">
         <li><a href="create_patient.php" class="list">Register Patient</a></li>
-            <li><a href="view_patient.php" class="list" id="active">View Patient</a></li>
-            <li><a href="view_admission.php" class="list">Check Up Admission</a></li>
+            <li><a href="view_patient.php" class="list">View Patient</a></li>
+            <li><a href="view_admission.php" class="list"  id="active">Check Up Admission</a></li>
             <li><a href="search.php" class="list">Search Patients</a></li>
             <li><a href="report.php" class="list">Report</a></li>
         </ul>
@@ -43,15 +43,13 @@ include '../connection/connect.php';
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">ADMISSION ID</th>
       <th scope="col">PATIENT ID</th>
-      <th scope="col">NAME</th>
-      <th scope="col">NIC</th>
-      <th scope="col">GENDER</th>
-      <th scope="col">DATE OF BIRTH</th>
-      <th scope="col">ADDRESS</th>
-      <th scope="col">CITY</th>
       <th scope="col">TELEPHONE</th>
-      <th scope="col">EDIT</th>
+      <th scope="col">ADMISSION DATE</th>
+      <th scope="col">ADMISSION TIME</th>
+      <th scope="col">CHECK UP TYPE</th>
+      <th scope="col">CONSULTING DOCTOR</th>
       <th scope="col">DELETE</th>
     </tr>
   </thead>
@@ -60,33 +58,29 @@ include '../connection/connect.php';
   <?php
 
 
-$sql="select * from `patient`";
+$sql="select * from `admission`";
 $result=mysqli_query($con, $sql);
 if($result){
  
     while($row=mysqli_fetch_assoc($result)){
-        $pid=$row['pid'];
-        $name=$row['name'];
-        $nic=$row['nic'];
-        $gender=$row['gender'];
-        $dob=$row['dob'];
-        $address=$row['address'];
-        $city=$row['city'];
-        $t_phone=$row['t_phone'];
+        $aid=$row['aid'];
+        $pid = $row['pid'];
+        $telephone = $row['telephone'];
+        $a_date = $row['a_date'];
+        $a_time = $row['a_time'];
+        $checkup_type = $row['checkup_type'];
+        $consulting_doc = $row['consulting_doc'];
 
         echo  '<tr>
-        <th scope="row">'.$pid.'</th>
-        <td>'.$name.'</td>
-        <td>'.$nic.'</td>
-        <td>'.$gender.'</td>
-        <td>'.$dob.'</td>
-        <td>'.$address.'</td>
-        <td>'.$city.'</td>
-        <td>'.$t_phone.'</td>
-        <td>
-        <button class="btn btn-primary"  style="background-color:#198754" ><a href="update_patient.php?updateid='.$pid.'" class="text-light">Update</a></button>
-        </td><td>
-        <button class="btn btn-danger"><a href="delete_patient.php?deleteid='.$pid.'" class="text-light">Delete</a></button>
+        <th scope="row">'.$aid.'</th>
+        <td>'.$pid.'</td>
+        <td>'.$telephone.'</td>
+        <td>'.$a_date.'</td>
+        <td>'.$a_time.'</td>
+        <td>'.$checkup_type.'</td>
+        <td>'.$consulting_doc.'</td>
+       <td>
+        <button class="btn btn-danger"><a href="delete_patient.php?deleteid='.$aid.'" class="text-light">Delete</a></button>
 
      </td>
       </tr>';

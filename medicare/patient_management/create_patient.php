@@ -47,11 +47,11 @@ if (isset($_POST['submit'])) {
     <!-- second navigation bar -->
     <div>
         <ul class="secondNav">
-            <li><a href="create_patient.php" class="list" id="active" style="color:white">Register Patient</a></li>
+        <li><a href="create_patient.php" class="list"  id="active">Register Patient</a></li>
             <li><a href="view_patient.php" class="list">View Patient</a></li>
-            <li><a href="" class="list">Check Up Admission</a></li>
-            <li><a href="" class="list">Search Patients</a></li>
-            <li><a href="" class="list">Report</a></li>
+            <li><a href="view_admission.php" class="list" >Check Up Admission</a></li>
+            <li><a href="search.php" class="list">Search Patients</a></li>
+            <li><a href="report.php" class="list">Report</a></li>
         </ul>
 
     </div>

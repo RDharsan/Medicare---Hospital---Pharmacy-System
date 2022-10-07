@@ -31,9 +31,9 @@
  <br><br> <div>
     <button onclick="location.href='create_patient.php'" class="btnmain">Register Patients</button>
     <button onclick="location.href='view_patient.php'" class="btnmain">View Patients</button>
-    <button onclick="location.href='#'" class="btnmain">Check Up Admission</button><br>
-    <button onclick="location.href='#'"class="btnmain2">Search Patients</button>
-    <button onclick="location.href='#'" class="btnmain2">Report</button>
+    <button onclick="location.href='view.admission.php'" class="btnmain">Check Up Admission</button><br>
+    <button onclick="location.href='search.php'"class="btnmain2">Search Patients</button>
+    <button onclick="location.href='report.php'" class="btnmain2">Report</button>
   </div>
 
   
