@@ -46,6 +46,7 @@ include '../connection/connect.php';
                     <center>
                         <h3>Patient Records</h3>
                     </center>
+                    <!-- comment -->
                     <table class="table table=hover" style="text-align: center;">
                        
                         <?php
