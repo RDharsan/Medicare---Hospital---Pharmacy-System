@@ -12,12 +12,12 @@
    $pdf->SetTextColor(0,0,0);
    $pdf->SetFont("Arial", "B", 10);
 
-    $pdf->cell(50,10,"Doctor_Name", "1", "0", "C");
-    $pdf->cell(20,10,"Appointment_date", "1", "0", "C"); 
-    $pdf->cell(40,10,"Appointment_time", "1", "0", "C");
-    $pdf->cell(20,10,"Status", "1", "0", "C");
-    $pdf->cell(35,10,"Speciality", "1", "0", "C");
-    $pdf->cell(20,10,"Patient Name", "1", "1", "C");
+    $pdf->cell(30,10,"Doctor_Name", "1", "0", "C");
+    $pdf->cell(35,10,"Appointment_date", "1", "0", "C"); 
+    $pdf->cell(35,10,"Appointment_time", "1", "0", "C");
+    $pdf->cell(25,10,"Status", "1", "0", "C");
+    $pdf->cell(30,10,"Speciality", "1", "0", "C");
+    $pdf->cell(30,10,"Patient Name", "1", "1", "C");
     $pdf->SetFont("Arial", "", 8);
 
     //table rows
@@ -31,12 +31,12 @@
             while($appointment = $result->fetch()){
 
                
-                $pdf->cell(50,10,$appointment['Dr_Name'], "1", "0", "C");
-                $pdf->cell(20,10,$appointment['App_date'], "1", "0", "C");
-                $pdf->cell(40,10,$appointment['App_time'], "1", "0", "C");
-                $pdf->cell(20,10,$appointment['status'], "1", "0", "C");
-                $pdf->cell(35,10,$appointment['speciality'], "1", "0", "C");
-                $pdf->cell(20,10,$appointment['patient_name'], "1","1", "C");
+                $pdf->cell(30,10,$appointment['Dr_Name'], "1", "0", "C");
+                $pdf->cell(35,10,$appointment['App_date'], "1", "0", "C");
+                $pdf->cell(35,10,$appointment['App_time'], "1", "0", "C");
+                $pdf->cell(25,10,$appointment['status'], "1", "0", "C");
+                $pdf->cell(30,10,$appointment['speciality'], "1", "0", "C");
+                $pdf->cell(30,10,$appointment['patient_name'], "1","1", "C");
               
             }
 
