@@ -1,5 +1,5 @@
 <?php
-include '../connection/connect.php';
+include 'connect.php';
 if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $address=$_POST['address'];
@@ -25,6 +25,50 @@ if(isset($_POST['submit'])){
 <html lang="en">
 
 <head>
+
+<script type="text/javascript">
+    function validate(){
+    var phone = document.forms["myform"]["phone"].value;
+    if(isNaN(phone)){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Only digits allowed for Phone number</span>"
+        return false;
+    }
+
+    else if(phone.length>10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(phone.length<10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(phone.charAt(0)==9){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Starting number 9 not allowed</span>"
+        return false;
+    }
+
+
+
+    var email = document.forms["myform"]["email"].value;
+    
+    var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+    var x=re.test(email);
+    if(x){
+        
+    }
+    else{
+        document.getElementById("errormail").innerHTML="<span style='color: red;'>"+"mail id not in correct format</span>"
+        return false;
+    }
+
+
+  }
+
+</script>
+
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,11 +90,12 @@ if(isset($_POST['submit'])){
     <!-- second navigation bar -->
     <div>
         <ul class="secondNav">
-            <li><a href="doctor.php" class="list" id="active" style="color:white">Doctor Registration</a></li>
+            <li><a href="doctor.php" class="list" id="active">Doctor Registration</a></li>
             <li><a href="display.php" class="list">View Doctors</a></li>
-            <li><a href="" class="list">Appointment</a></li>
-            <li><a href="" class="list">Search Doctor</a></li>
-            <li><a href="" class="list">Doctor Report</a></li>
+            <li><a href="viewAppointment.php" class="list">Appointment</a></li>
+            <li><a href="search.php" class="list">Search Doctor</a></li>
+            <li><a href="searchApp.php" class="list">Search Appointment</a></li>
+            <li><a href="report.php" class="list">Report</a></li>
         </ul>
 
     </div>
@@ -58,7 +103,7 @@ if(isset($_POST['submit'])){
 
 
     <div class="container my-5">
-        <form method="POST">
+        <form name="myform" onsubmit="return validate()" method="POST" >
             <h2>Personal Information</h2>
             <div class="form-group" style="float:left; width:48%;">
                 <label>Name</label>
@@ -70,20 +115,23 @@ if(isset($_POST['submit'])){
             </div>
             <div class="form-group" style="float:left; width:48%;">
                 <label>Phone</label>
-                <input type="text" class="form-control" placeholder="Enter Your Phone Number" name="phone" autocomplete="off" required>
+                <input type="text"  class="form-control" placeholder="Enter Your Phone Number" name="phone" autocomplete="off" required>
+                <span id="error"></span>
             </div>
+            
 
             <div class="form-group" style="float:right; width:48%;">
                 <label>Email</label>
                 <input type="text" class="form-control" placeholder="Enter Your Email" name="email" autocomplete="off" required>
+                <span id="errormail"></span>
             </div>
 
 
+            
             <h2>Professional Information</h2>
             <div class="form-group" style="float:left; width:48%;">
                 <label >Position</label>
                 <select class="form-control" placeholder="Select Your Position" name="position" autocomplete="off" required>
-            
                 <option value="Physician">Physician</option> 
                 <option value="Surgeon">Surgeon</option>
                 <option value="Neutritionist">Neutritionist</option>
@@ -91,6 +139,7 @@ if(isset($_POST['submit'])){
                 <option value="OPD">OPD</option>
                 </select>
             </div>
+
 
             <div class="form-group" style="float:right; width:48%;">
                 <label>Medical_School</label>
@@ -105,6 +154,7 @@ if(isset($_POST['submit'])){
             </div>
 
 
+
             <div class="form-group" style="float:left; width:48%;">
                 <label>Speciality</label>
                 <select class="form-control" placeholder="Enter Your Speciality" name="speciality" autocomplete="off" required>
@@ -116,6 +166,8 @@ if(isset($_POST['submit'])){
                 <option value="Gynecologist">Gynecologist</option>  
                 </select>
             </div>
+
+
 
             <div class="form-group" style="float:right; width:48%;">
                 <label>Program Director</label>
@@ -129,8 +181,11 @@ if(isset($_POST['submit'])){
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="background-color:#198754" name="submit">Submit</button>
+            <input type="submit" value="Submit" class="btn btn-primary" style="background-color:#198754">
+            <!--button type="submit" class="btn btn-primary" style="background-color:#198754" name="submit" >Submit</button-->
         </form>
+        
+    
 
 
     </div>

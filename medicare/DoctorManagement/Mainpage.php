@@ -31,9 +31,10 @@
  <br><br> <div>
     <button onclick="location.href='doctor.php'" class="btnmain">Doctor Registration</button>
     <button onclick="location.href='display.php'" class="btnmain">View Doctors</button>
-    <button onclick="location.href='#'" class="btnmain">Appointment</button><br>
-    <button onclick="location.href='#'"class="btnmain2">Search Doctor</button>
-    <button onclick="location.href='#'" class="btnmain2">Doctor Report</button>
+    <button onclick="location.href='viewAppointment.php'" class="btnmain">Appointment</button>
+    <button onclick="location.href='search.php'"class="btnmain">Search Doctor</button>
+    <button onclick="location.href='searchApp.php'"class="btnmain">Search Appointment</button>
+    <button onclick="location.href='report.php'" class="btnmain">Report</button>
   </div>
 
   
