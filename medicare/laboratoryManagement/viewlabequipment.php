@@ -17,9 +17,13 @@ include '../connection/connect.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <script src="index.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="secondNav.css">
+
+  <!-- Js validation - trying -->
+  <script src="custom.js"></script>
 
   <title>Medicare</title>
   <link rel="icon" type="image/x-icon" href="../logo.jpg">
@@ -43,7 +47,7 @@ include '../connection/connect.php';
 
 </div>
 <br>
-
+  
     <div class="container"><br>
     <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:25px; margin-top:-25px" onclick="location.href='addEquipDetails.php'" name="addequip">Add Equipement Details</button><br>
 
@@ -90,7 +94,7 @@ include '../connection/connect.php';
         <td>
         
     <button class="btn btn-primary" style="background-color:#198754"><a href="updatelabequipment.php?updateid=' . $equipment_id . '" class="text-light">Update</a></button></td>
-    <td><button class="btn btn-danger" "><a href="deletelabequipment.php?deleteid=' . $equipment_id . '" class="text-light">Delete</a></button>
+    <td><button class="btn btn-danger"" ><a href="deletelabequipment.php?deleteid=' . $equipment_id . '" class="text-light">Delete</a></button>
 
      </td>
       </tr>';
@@ -103,6 +107,7 @@ include '../connection/connect.php';
 
         </tbody>
       </table>
+  
     </div>
  <!-- Footer -->
  <?php

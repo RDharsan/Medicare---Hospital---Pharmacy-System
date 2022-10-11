@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $sql = "insert into `medicaltest` (test_type, lab_room, lab_incharge, nurse, test_doneby, test_date) values ('$test_type', '$lab_room', '$lab_incharge', '$nurse', '$test_doneby', '$test_date')";
     $result = mysqli_query($con, $sql);
     if ($result) {
-        
+
         header('location: viewmedicaltest.php');
     } else {
         die(mysqli_error($con));
@@ -32,9 +32,12 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
-   
+
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
+    
+
+
 </head>
 
 <body>
@@ -62,14 +65,14 @@ if (isset($_POST['submit'])) {
 
 
     <div class="container my-5">
-        <form method="POST">
+        <form method="POST" id="">
             <h1 style="margin-left:35% ;">Add Medical Test</h1><br><br><br>
             <!-- <div class="form-group">  -->
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
                     <label>Test Type</label>
                     <!-- <input type="text" class="form-control" placeholder="Enter test tyoe" name="test_type" autocomplete="off"> -->
-                    <select name="test_type" required class="form-control">
+                    <select name="test_type" required class="form-control" id="test_type">
                         <option disabled selected>Choose here</option>
                         <option>BUN</option>
                         <option>Blood Test</option>
@@ -88,7 +91,7 @@ if (isset($_POST['submit'])) {
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Lab room number:</label>
-                    <input type="number" class="form-control" min=0 max=100 placeholder="Enter lab room No" name="lab_room" autocomplete="off" required>
+                    <input type="number" class="form-control" min=0 max=100 placeholder="Enter lab room No" name="lab_room" id="lab_room" autocomplete="off" required>
                     <br>
                 </div>
 
@@ -105,7 +108,7 @@ if (isset($_POST['submit'])) {
                     $sql1 = "select name from `doctor`";
                     $result1 = mysqli_query($con, $sql1);
                     ?>
-                    <select name="lab_incharge" class="form-control">
+                    <select name="lab_incharge" class="form-control" id="lab_incharge">
                         <option disabled selected>Choose doctor</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -122,7 +125,7 @@ if (isset($_POST['submit'])) {
                     <br>
                 </div>
 
-                
+
 
 
 
@@ -137,7 +140,7 @@ if (isset($_POST['submit'])) {
                     $sql1 = "select name from `nurse`";
                     $result1 = mysqli_query($con, $sql1);
                     ?>
-                    <select name="nurse" class="form-control">
+                    <select name="nurse" class="form-control" id="nurse">
                         <option disabled selected>Choose here</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -164,7 +167,7 @@ if (isset($_POST['submit'])) {
                     $sql1 = "select name from `doctor`";
                     $result1 = mysqli_query($con, $sql1);
                     ?>
-                    <select name="test_doneby" class="form-control">
+                    <select name="test_doneby" class="form-control" id="test_doneby">
                         <option disabled selected>Choose here</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -183,13 +186,13 @@ if (isset($_POST['submit'])) {
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Test done date:</label>
-                    <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" required>
+                    <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" id="test_date" required>
                     <br>
                 </div>
             </div>
             <br>
 
-            <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit" id="submit">Submit</button>
             <button type="reset" class="btn btn-primary" style="background-color:#198754;margin-left:1%" name="reset">Reset</button>
 
         </form>

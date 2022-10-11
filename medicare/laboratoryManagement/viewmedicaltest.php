@@ -23,6 +23,7 @@ include '../connection/connect.php';
 
   <title>Medicare</title>
   <link rel="icon" type="image/x-icon" href="../logo.jpg">
+  <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 </head>
 
 <body>
@@ -90,9 +91,8 @@ include '../connection/connect.php';
         <td>
         
     <button class="btn btn-primary" style="background-color:#198754"><a href="updatemedicaltest.php?updateid=' . $test_id . '" class="text-light">Update</a></button></td>
-    <td><button class="btn btn-danger" "><a href="deletemedicaltest.php?deleteid=' . $test_id . '" class="text-light">Delete</a></button>
+    <td><button class="btn btn-danger" " ><a href="deletemedicaltest.php?deleteid=' . $test_id . '" class="text-light" >Delete</a></button>
 
-     </td>
       </tr>';
             }
           }

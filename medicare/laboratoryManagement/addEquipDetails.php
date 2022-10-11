@@ -1,22 +1,32 @@
 <?php
+
 include '../connection/connect.php';
+
+
+
 if (isset($_POST['submit'])) {
+
+
+
     $equipment = $_POST['equipment'];
     $model = $_POST['model'];
     $insurance_date = $_POST['insurance_date'];
     $cost = $_POST['cost'];
     $estimated_lifespan = $_POST['estimated_lifespan'];
-  
+
 
     $sql = "insert into `labequipment` (equipment, model, insurance_date, cost, estimated_lifespan) values ('$equipment', '$model', '$insurance_date', '$cost', '$estimated_lifespan')";
     $result = mysqli_query($con, $sql);
     if ($result) {
-        
+   
         header('location: viewlabequipment.php');
     } else {
+
         die(mysqli_error($con));
     }
 }
+
+
 
 ?>
 
@@ -32,9 +42,12 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
-   
+
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
+    <script src="index.js"></script>
+
+
 </head>
 
 <body>
@@ -47,7 +60,7 @@ if (isset($_POST['submit'])) {
     <!-- second navigation bar -->
     <div>
         <ul class="secondNav">
-            <li><a href="addmedicaltest.php" class="list" >Add Medical Test</a></li>
+            <li><a href="addmedicaltest.php" class="list">Add Medical Test</a></li>
             <li><a href="viewmedicaltest.php" class="list">View Test</a></li>
             <li><a href="index.php" class="list">Report</a></li>
             <li><a href="search.php" class="list">Search Lab</a></li>
@@ -64,48 +77,54 @@ if (isset($_POST['submit'])) {
 
 
     <div class="container my-5">
-        <form method="POST">
+        <form method="POST" autocomplete="off">
             <h1 style="margin-left:25% ;">Add Lab Equipment Details</h1><br><br><br>
             <!-- <div class="form-group">  -->
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
                     <label>Equipment:</label>
-                    <input type="text" class="form-control" placeholder="Enter equipment name" name="equipment" autocomplete="off" required>
-                   
+                    <input type="text" class="form-control" placeholder="Enter equipment name" name="equipment" id="equipment" autocomplete="off" required>
+
+
                     <br>
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Model:</label>
-                    <input type="text" class="form-control"  placeholder="Enter Equipment Model" name="model" autocomplete="off" required>
+                    <input type="text" class="form-control" placeholder="Enter Equipment Model" name="model" id="model" autocomplete="off" required>
+
                     <br>
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Insurance Date:</label>
-                    <input type="date" class="form-control" placeholder="Select Insurance applied date" name="insurance_date" autocomplete="off" required>
+                    <input type="date" class="form-control" placeholder="Select Insurance applied date" name="insurance_date" id="insurance_date" autocomplete="off" required>
+
                 </div>
 
-      
+
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Cost:</label>
-                    Rs.<input type="number" class="form-control" placeholder="Enter Amount: Rs.10000" min="0" name="cost" autocomplete="off" required>
+                    Rs.<input type="number" class="form-control" placeholder="Enter Amount: Rs.10000" min="0" name="cost" id="cost" autocomplete="off" required>
+
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <br><label>Estimated Lifespan:(Digit)</label>
-                    <input type="number" class="form-control" placeholder="Eg: 10 yrs" min="0"  name="estimated_lifespan" autocomplete="off" required>
-                   
+                    <input type="number" class="form-control" placeholder="Eg: 10 yrs" min="0" name="estimated_lifespan" id="estimated_lifespan" autocomplete="off" required>
+
+
                 </div>
-                
+
             </div>
             <br>
 
-            <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit" id="register">Submit</button>
+
             <button type="reset" class="btn btn-primary" style="background-color:#198754;margin-left:1%" name="reset">Reset</button>
 
         </form>
@@ -115,6 +134,45 @@ if (isset($_POST['submit'])) {
     <?php
     include('footer.php');
     ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script type="text/javascript">
+        $(function() {
+            $('#register').click(function() {
+
+
+                var valid= this.form.checkValidity();
+                if(valid){
+                    e.preventDefault();
+
+                    $.ajax({
+                        type:'POST',
+                        url:
+                    });
+                    alert(true);
+
+                }else{
+                    alert(false);
+                }
+                var equipment = $('#equipment').val();
+                var model = $('#model').val();
+                var insurance_date = $('#insurance_date').val();
+                var cost = $('#cost').val();
+                var estimated_lifespan = $('#estimated_lifespan').val();
+            });
+            // alert('hello!');
+            Swal.fire({
+                'title': 'Hello World!',
+                'text': 'This is from sweet',
+                'type': 'success'
+            }).then(() => {
+                dispatch(redirect('/'));
+            })
+
+        });
+    </script> -->
+
 </body>
 
 </html>
