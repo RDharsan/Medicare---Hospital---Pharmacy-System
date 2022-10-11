@@ -43,7 +43,7 @@ include '../connection/connect.php';
 
 <table class="table">
   <thead>
-    <tr>
+    <tr style="background-color:#198754;color:white;">
       <th scope="col">PATIENT ID</th>
       <th scope="col">NAME</th>
       <th scope="col">NIC</th>
