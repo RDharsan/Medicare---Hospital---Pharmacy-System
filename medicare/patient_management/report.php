@@ -28,6 +28,7 @@ include '../connection/connect.php';
         <li><a href="create_patient.php" class="list">Register Patient</a></li>
             <li><a href="view_patient.php" class="list">View Patient</a></li>
             <li><a href="view_admission.php" class="list"  id="active">Check Up Admission</a></li>
+            <li><a href="create_admission.php" class="list" >Add Admission</a></li>
             <li><a href="search.php" class="list">Search Patients</a></li>
             <li><a href="report.php" class="list">Report</a></li>
         </ul>
@@ -59,11 +60,10 @@ include '../connection/connect.php';
                         ?>
                                 <tr>
                                     <td>
-                                        
-                                        <button class="btn btn-primary" style="background-color:#198754" ><a href="patient_pdf.php?pid=<?php echo $patient['pid'];?> " class="text-light">View Online</a></button>
+                                        <button class="btn btn-primary" style="background-color:#198754" ><a href="patient_pdf.php" class="text-light">View Online</a></button>
                                     </td>
                                     <td>
-                                    <button class="btn btn-primary" style="background-color:#198754" ><a href="patient_pdf.php?pid=<?php echo $patient['pid'];?>" class="text-light" download="patient_pdf.php?id=<?php echo $patient['pid'];?>">Download Now</a>
+                                    <button class="btn btn-primary" style="background-color:#198754" ><a href="patient_pdf.php" class="text-light" download="patient_pdf.php">Download Now</a>
                                     </td>
                                 </tr>
                         <?php
@@ -100,10 +100,10 @@ include '../connection/connect.php';
                                 <tr>
                                     <td>
                                         
-                                        <button class="btn btn-primary" style="background-color:#198754" ><a href="admission_pdf.php?aid=<?php echo $admission['aid'];?> " class="text-light">View Online</a></button>
+                                        <button class="btn btn-primary" style="background-color:#198754" ><a href="admission_pdf.php" class="text-light">View Online</a></button>
                                     </td>
                                     <td>
-                                    <button class="btn btn-primary" style="background-color:#198754" ><a href="admission_pdf.php?aid=<?php echo $admission['aid'];?>" class="text-light" download="admission.php?id=<?php echo $admission['aid'];?>">Download Now</a>
+                                    <button class="btn btn-primary" style="background-color:#198754" ><a href="admission_pdf.php" class="text-light" download="admission.php?id=<?php echo $admission['aid'];?>">Download Now</a>
                                     </td>
                                 </tr>
                         <?php

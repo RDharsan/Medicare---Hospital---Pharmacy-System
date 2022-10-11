@@ -50,14 +50,15 @@ if (isset($_POST['submit'])) {
         <li><a href="create_patient.php" class="list"  id="active">Register Patient</a></li>
             <li><a href="view_patient.php" class="list">View Patient</a></li>
             <li><a href="view_admission.php" class="list" >Check Up Admission</a></li>
+            <li><a href="create_admission.php" class="list" >Add Admission</a></li>
             <li><a href="search.php" class="list">Search Patients</a></li>
             <li><a href="report.php" class="list">Report</a></li>
         </ul>
 
     </div>
     <div class="container my-5">
-        <form method="POST">
-        <h1 style="margin-left:35% ;">Add Patient Details</h1><br><br><br>
+        <form method="POST" id="patient_form">
+        <h1 style="margin-left:35% ;">Add Patient Details</h1>
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
 
@@ -97,6 +98,27 @@ if (isset($_POST['submit'])) {
                 <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit">Submit</button>
                 <button type="reset" class="btn btn-primary" style="background-color:#198754" name="reset">Reset</button>
         </form>
+
+        <script  type="text/javascript">
+            var frmvalidator = new Validator("patient_form");
+            frmvalidator.addValidation("name","req","Please enter your First Name");
+            frmvalidator.addValidation("name","maxlen=20",
+                    "Max length for FirstName is 20");
+
+            frmvalidator.addValidation("nic","req");
+            frmvalidator.addValidation("nic","maxlen=20");
+
+            frmvalidator.addValidation("t_phone","maxlen=20");
+            frmvalidator.addValidation("t_phone","req");
+    
+            frmvalidator.addValidation("Phone","maxlen=50");
+            frmvalidator.addValidation("Phone","numeric");
+
+            frmvalidator.addValidation("address","maxlen=50");
+            frmvalidator.addValidation("gender","dontselect=Choose Here");
+
+        </script>
+
 
     </div>
     <!-- Footer -->

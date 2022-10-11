@@ -34,10 +34,11 @@ include '../connection/connect.php';
     <div>
     <ul class="secondNav">
     <li><a href="create_patient.php" class="list">Register Patient</a></li>
-    <li><a href="view_patient.php" class="list">View Patient</a></li>
-    <li><a href="view_admission.php" class="list">Check Up Admission</a></li>
-    <li><a href="search.php" class="list" id="active">Search Patients</a></li>
-    <li><a href="report.php" class="list">Report</a></li>
+            <li><a href="view_patient.php" class="list">View Patient</a></li>
+            <li><a href="view_admission.php" class="list" >Check Up Admission</a></li>
+            <li><a href="create_admission.php" class="list" >Add Admission</a></li>
+            <li><a href="search.php" class="list" id="active">Search Patients</a></li>
+            <li><a href="report.php" class="list">Report</a></li>
     </ul>
 
 </div>
@@ -45,15 +46,15 @@ include '../connection/connect.php';
     <div class="container my-5" >
         <form action="" method="POST">
             <div class="form-group" style="margin-left:37%">
-            <!-- <input class="form-control-lg" type="text" placeholder="Search Patient" name="search"> -->
+            <input class="form-control-lg" type="text" placeholder="Search Patient" name="search">
             <div class="col-md-5">
-                    <input type="text" placeholder="search" name="search">
+                    <!-- <input type="text" placeholder="search" name="search"> -->
                     <br>
              <button class="btn btn-primary btn-lg" style="background-color:#198754;margin-left:30%" name="submit" >Search</button>
             </div>
         </div>
         </form>
-        <br><br>
+        
 
         <div class="container">
 

@@ -31,6 +31,7 @@ include '../connection/connect.php';
         <li><a href="create_patient.php" class="list">Register Patient</a></li>
             <li><a href="view_patient.php" class="list" id="active">View Patient</a></li>
             <li><a href="view_admission.php" class="list">Check Up Admission</a></li>
+            <li><a href="create_admission.php" class="list">Add Admission</a></li>
             <li><a href="search.php" class="list">Search Patients</a></li>
             <li><a href="report.php" class="list">Report</a></li>
         </ul>

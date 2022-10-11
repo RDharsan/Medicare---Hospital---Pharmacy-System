@@ -49,7 +49,8 @@ if (isset($_POST['submit'])) {
         <ul class="secondNav">
             <li><a href="create_patient.php" class="list">Register Patient</a></li>
             <li><a href="view_patient.php" class="list">View Patient</a></li>
-            <li><a href="view_admission.php" class="list"  id="active">Check Up Admission</a></li>
+            <li><a href="view_admission.php" class="list" >Check Up Admission</a></li>
+            <li><a href="create_admission.php" class="list" id="active" >Add Admission</a></li>
             <li><a href="search.php" class="list">Search Patients</a></li>
             <li><a href="report.php" class="list">Report</a></li>
         </ul>
@@ -57,7 +58,7 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="container my-5">
         <form method="POST">
-        <h1 style="margin-left:35% ;">Add Patient Details</h1><br><br><br>
+        <h1 style="margin-left:35% ;">Add Patient Details</h1>
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
 
