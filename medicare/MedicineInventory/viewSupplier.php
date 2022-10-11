@@ -80,8 +80,8 @@ include '../connection/connect.php';
         <ul class="secondNav">
         <li><a href="addmedicine.php" class="list" >Add Medicine</a></li>
             <li><a href="viewMedicine.php" class="list">View Medicine Details</a></li>
-            <li><a href="" class="list">Search Medicine</a></li>
-            <li><a href="" class="list">Report Generate</a></li>
+            <li><a href="search.php" class="list">Search Medicine</a></li>
+            <li><a href="index.php" class="list">Report Generate</a></li>
             <li><a href="addsupplier.php" class="list" >Add Suppliers</a></li>
             <li><a href="viewSupplier.php" class="list" id="active" style="color:white">View Supplier Details</a></li>
         </ul>

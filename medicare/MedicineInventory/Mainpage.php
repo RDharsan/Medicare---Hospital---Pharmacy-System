@@ -32,8 +32,8 @@
  <br><br> <div>
     <button onclick="location.href='addmedicine.php'" class="btnmain">Add Medicine</button>
     <button onclick="location.href='viewMedicine.php'" class="btnmain">View Medicine Details</button>
-    <button onclick="location.href='#'" class="btnmain">Search Medicine</button><br>
-    <button onclick="location.href='#'"class="btnmain">Report Generate</button>
+    <button onclick="location.href='search.php'" class="btnmain">Search Medicine</button><br>
+    <button onclick="location.href='index.php'"class="btnmain">Report Generate</button>
     <button onclick="location.href='addsupplier.php'" class="btnmain">Add Suppliers </button>
     <button onclick="location.href='viewSupplier.php'" class="btnmain">View Suppliers Details</button>
   </div>

@@ -77,6 +77,10 @@ if(isset($_POST['submit'])){
             padding: 20px;
             height: 300px;
         } */
+        .a{
+            margin-left: 20px !important;
+            margin-top: 20px !important;
+        }
     </style>
             <!-- Required meta tags -->
             <meta charset="utf-8">
@@ -100,8 +104,8 @@ if(isset($_POST['submit'])){
         <ul class="secondNav">
         <li><a href="addmedicine.php" class="list" >Add Medicine</a></li>
         <li><a href="viewMedicine.php" class="list">View Medicine Details</a></li>
-        <li><a href="" class="list">Search Medicine</a></li>
-        <li><a href="" class="list">Report Generate</a></li>
+        <li><a href="search.php" class="list">Search Medicine</a></li>
+        <li><a href="index.php" class="list">Report Generate</a></li>
         <li><a href="addsupplier.php" class="list">Add Suppliers</a></li>
         <li><a href="viewSupplier.php" class="list" id="active" style="color:white">View Supplier Details</a></li>
         
@@ -109,6 +113,7 @@ if(isset($_POST['submit'])){
 
     </div>
 
+<button class="btn a" style="background-color:#198754"><a href="viewSupplier.php" style="color: white">BACK</a></button>
 
   <h3><b>UPDATE SUPPLIER DETAILS</b></h3>
 

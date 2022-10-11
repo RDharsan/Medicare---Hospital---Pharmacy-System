@@ -34,12 +34,6 @@ if(isset($_POST['submit'])){
             height: 350px;
             margin-top: 30px;
         }
-        /* .side{
-            width: 300px!important;          
-        }
-        .sside{
-            width: 300px!important;
-        } */
         .button2 {
             background-color: #198754;
             width: 100px;
@@ -73,11 +67,6 @@ if(isset($_POST['submit'])){
         .in-row{
             display: flex;
         }
-        /* .in-col{
-            flex: 20%;
-            padding: 20px;
-            height: 300px;
-        } */
     </style>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -101,8 +90,8 @@ if(isset($_POST['submit'])){
         <ul class="secondNav">
             <li><a href="addmedicine.php" class="list" id="active" style="color:white">Add Medicine</a></li>
             <li><a href="viewMedicine.php" class="list">View Medicine Details</a></li>
-            <li><a href="" class="list">Search Medicine</a></li>
-            <li><a href="" class="list">Report Generate</a></li>
+            <li><a href="search.php" class="list">Search Medicine</a></li>
+            <li><a href="index.php" class="list">Report Generate</a></li>
             <li><a href="addsupplier.php" class="list">Add Suppliers</a></li>
             <li><a href="viewSupplier.php" class="list">View Supplier Details</a></li>
         </ul>
