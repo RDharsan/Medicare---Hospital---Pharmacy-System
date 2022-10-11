@@ -46,9 +46,9 @@
         }
     }
     
-    // $pdfTitle = 'Lab Equipment Report.pdf';
-    // $pdf->Output( 'D', $pdfTitle, true );
-    $pdf->Output();
+    $pdfTitle = 'Lab Equipment Report.pdf';
+    $pdf->Output( 'D', $pdfTitle, true );
+  
    
    ob_end_flush();
 

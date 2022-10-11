@@ -45,8 +45,8 @@
         }
     }
    
-    
-    $pdf->Output();
+    $pdfTitle = 'Medical test Report.pdf';
+    $pdf->Output( 'D', $pdfTitle, true );
    ob_end_flush();
 
 ?>

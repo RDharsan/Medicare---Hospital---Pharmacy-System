@@ -58,53 +58,10 @@ if (isset($_POST['submit'])) {
     <script type="text/javascript"></script>
     <script type="text/javascript" src="index.js"></script>
 
-        <!-- // function validate() {
+    
 
-        //     var equipment = document.forms["myform"]["equipment"].value;
-        //     if (equipment == "") {
-        //         alert("please enter valid equipment name!!");
-        //         return false;
-        //     } else {
-        //         var ename = /^[a-zA-Z]*$/;
-        //         if (!ename.test(equipment)) {
-        //             alert('Invalid Equipment name given!!!');
-        //             return false;
-        //         }
-        //     }
+    
 
-        //     var model = document.forms["myform"]["model"].value;
-        //     if (model == "") {
-        //         alert("Please enter the valid model name!!");
-        //         return false;
-        //     }
-        //     else {
-        //         var modelname = /^[a-zA-Z]*$/;
-        //         if (!modelname.test(model)) {
-        //             alert('Invalid Model name given!!!');
-        //             return false;
-        //         }
-        //     }
-
-        //     var insurance_date = document.forms["myform"]["insurance_date"].value;
-        //     if (insurance_date == "") {
-        //         alert("Please select the valid insurance_date!!");
-        //         return false;
-        //     }
-
-        //     var cost = document.forms["myform"]["cost"].value;
-        //     if (cost == "") {
-        //         alert("Please enter the valid cost!!");
-        //         return false;
-        //     }
-
-        //     var estimated_lifespan = document.forms["myform"]["estimated_lifespan"].value;
-        //     if (estimated_lifespan == "") {
-        //         alert("Please enter the estimated_lifespan!!");
-        //         return false;
-        //     }
-
-        // } -->
-   
 
 
 </head>
@@ -159,9 +116,10 @@ if (isset($_POST['submit'])) {
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
-                    <label>Insurance Date:</label>
-                    <input type="date" class="form-control" placeholder="Select Insurance applied date" name="insurance_date" id="insurance_date" autocomplete="off">
-
+                
+                        <label>Insurance Date:</label>
+                        <input type="date" min="2021-01-01" onchange="datepick()" placeholder="Select Insurance applied date" class="form-control" name="insurance_date" id="insurance_date" autocomplete="off">
+                 
                 </div>
 
 
@@ -196,41 +154,9 @@ if (isset($_POST['submit'])) {
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script type="text/javascript">
-        $(function() {
-            $('#register').click(function() {
+  
 
-
-                var valid= this.form.checkValidity();
-                if(valid){
-                    e.preventDefault();
-
-                    $.ajax({
-                        type:'POST',
-                        url:
-                    });
-                    alert(true);
-
-                }else{
-                    alert(false);
-                }
-                var equipment = $('#equipment').val();
-                var model = $('#model').val();
-                var insurance_date = $('#insurance_date').val();
-                var cost = $('#cost').val();
-                var estimated_lifespan = $('#estimated_lifespan').val();
-            });
-            // alert('hello!');
-            Swal.fire({
-                'title': 'Hello World!',
-                'text': 'This is from sweet',
-                'type': 'success'
-            }).then(() => {
-                dispatch(redirect('/'));
-            })
-
-        });
-    </script> -->
+  
 
 </body>
 
