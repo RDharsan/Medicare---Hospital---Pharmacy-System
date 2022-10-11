@@ -46,11 +46,11 @@ include 'connect.php';
 
     <div class="container">
       
-    
+    <br> <h1 style="margin-left:30% ;">View Doctor Details</h1><br><br>
 
       <table class="table">
         <thead>
-          <tr>
+          <tr style="background-color:#198754;color:white;">
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Address</th>
@@ -60,7 +60,8 @@ include 'connect.php';
             <th scope="col">Medical School</th>
             <th scope="col">Speciality</th>
             <th scope="col">Director</th>
-            <th scope="col">Operations</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
          </tr>
         </thead>
       <tbody>
