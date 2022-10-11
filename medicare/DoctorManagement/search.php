@@ -58,6 +58,11 @@ include 'connect.php';
                         <option>Cardiologist</option>
                         <option>Endocrinologist</option>
                         <option>Gynecologist</option>
+                        <option >Family Medicine</option>
+                        <option >Clinical Immunology</option>
+                        <option >Pediatrics</option>  
+                        <option >Psychiatry</option>
+                        <option >Otolaryngology</option>
                        
                     </select>
                     <br>

@@ -137,7 +137,13 @@ if(isset($_POST['submit'])){
                 <option value="Dermatologist">Dermatologist</option>
                 <option value="Cardiologist">Cardiologist</option>
                 <option value="Endocrinologist">Endocrinologist</option>
-                <option value="Gynecologist">Gynecologist</option>  
+                <option value="Gynecologist">Gynecologist</option> 
+                <option value="Family Medicine">Family Medicine</option>
+                <option value="Clinical Immunology">Clinical Immunology</option>
+                <option value="Pediatrics">Pediatrics</option>  
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Otolaryngology">Otolaryngology</option>
+                <option value="Others">Others</option> 
                 </select>
             </div>
 

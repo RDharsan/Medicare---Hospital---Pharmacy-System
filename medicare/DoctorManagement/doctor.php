@@ -156,12 +156,12 @@ if(isset($_POST['submit'])){
                 <option value="Jaffna University">Jaffna University</option>
                 <option value="Kelani University">Kelani University</option>
                 <option value="Wayamba University">Wayamba University</option>
-                <option value="Jaffna University">South Asian institute of Medicine</option>
-                <option value="Kelani University">Peradeniya University</option>
-                <option value="Wayamba University">ANC Medical placement</option>
-                <option value="Kelani University">Ruhunu University</option>
-                <option value="Wayamba University">Rajarata University</option>
-                <option value="Wayamba University">Others</option>
+                <option value="South Asian institute of Medicine">South Asian institute of Medicine</option>
+                <option value="Peradeniya University">Peradeniya University</option>
+                <option value="ANC Medical placement">ANC Medical placement</option>
+                <option value="Ruhunu University">Ruhunu University</option>
+                <option value="Rajarata University">Rajarata University</option>
+                <option value="Others">Others</option>
                 </select>   
             </div>
 
@@ -176,12 +176,12 @@ if(isset($_POST['submit'])){
                 <option value="Cardiologist">Cardiologist</option>
                 <option value="Endocrinologist">Endocrinologist</option>
                 <option value="Gynecologist">Gynecologist</option>  
-                <option value="Cardiologist">Family Medicine</option>
-                <option value="Endocrinologist">Clinical Immunology</option>
-                <option value="Gynecologist">Pediatrics</option>  
-                <option value="Cardiologist">Psychiatry</option>
-                <option value="Endocrinologist">Otolaryngology</option>
-                <option value="Wayamba University">Others</option>
+                <option value="Family Medicine">Family Medicine</option>
+                <option value="Clinical Immunology">Clinical Immunology</option>
+                <option value="Pediatrics">Pediatrics</option>  
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Otolaryngology">Otolaryngology</option>
+                <option value="Others">Others</option>
                 </select>
             </div>
 
@@ -196,12 +196,12 @@ if(isset($_POST['submit'])){
                 <option value="Dr.Bandara">Dr.P.N.Rajapakshe</option>
                 <option value="Dr.Sanjana">Dr.Sanjana</option>
                 <option value="Dr.Vasuki">Dr.Vasuki</option>  
-                <option value="Dr.Bandara"> Prof. Anoja Abeyjeewa.</option>
-                <option value="Dr.Sanjana">Dr.H.K.De S.Kularatne</option>
-                <option value="Dr.Vasuki"> Dr.S.D.Rajamanthri</option>
-                <option value="Dr.Sanjana">Dr.B.D.A.Perera</option>
-                <option value="Dr.Vasuki">Prof.Nirmala </option>
-                <option value="Wayamba University">Others</option>  
+                <option value="Prof. Anoja Abeyjeewa"> Prof. Anoja Abeyjeewa</option>
+                <option value="r.H.K.De S.Kularatne">Dr.H.K.De S.Kularatne</option>
+                <option value="r.S.D.Rajamanthri"> Dr.S.D.Rajamanthri</option>
+                <option value="Dr.B.D.A.Perera">Dr.B.D.A.Perera</option>
+                <option value="Prof.Nirmala">Prof.Nirmala </option>
+                <option value="Others">Others</option>  
                 </select>
             </div>
 
