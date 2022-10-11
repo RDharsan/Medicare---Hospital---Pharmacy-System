@@ -34,7 +34,7 @@ include 'connect.php';
     <!-- second navigation bar -->
     <div>
     <ul class="secondNav">
-    <li><a href="doctor.php" class="list" id="active">Doctor Registration</a></li>
+    <li><a href="doctor.php" class="list" >Doctor Registration</a></li>
             <li><a href="display.php" class="list">View Doctors</a></li>
             <li><a href="" class="list">Appointment</a></li>
             <li><a href="search.php" class="list" id="active" style="color:white">Search Doctor</a></li>

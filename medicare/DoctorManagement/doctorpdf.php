@@ -8,18 +8,19 @@
    $pdf->Cell(185,20, "Doctor details Report", "0", "1", "C");
 
    //table coloumn
-   $pdf->SetLeftMargin(12);
+   $pdf->SetLeftMargin(16);
    $pdf->SetTextColor(0,0,0);
    $pdf->SetFont("Arial", "B", 10);
 
-    $pdf->cell(20,10,"Name", "1", "0", "C");
-    $pdf->cell(40,10,"Address", "1", "0", "C"); 
+    $pdf->cell(25,10,"Name", "1", "0", "C");
+ 
     $pdf->cell(20,10,"Phone", "1", "0", "C");
-    $pdf->cell(20,10,"Email", "1", "0", "C");
+    $pdf->cell(30,10,"Email", "1", "0", "C");
     $pdf->cell(25,10,"Position", "1", "0", "C");
     $pdf->cell(28,10,"Medical School", "1", "0", "C");
     $pdf->cell(25,10,"Speciality", "1", "0", "C");
-    $pdf->cell(25,10,"Director", "1", "0", "C");
+    $pdf->cell(25,10,"Director", "1", "1", "C");
+
     $pdf->SetFont("Arial", "", 8);
 
     //table rows
@@ -33,10 +34,10 @@
             while($doctor = $result->fetch()){
 
                
-                $pdf->cell(20,10,$doctor['name'], "1", "0", "C");
-                $pdf->cell(40,10,$doctor['address'], "1", "0", "C");
+                $pdf->cell(25,10,$doctor['name'], "1", "0", "C");
+                
                 $pdf->cell(20,10,$doctor['phone'], "1", "0", "C");
-                $pdf->cell(20,10,$doctor['email'], "1", "0", "C");
+                $pdf->cell(30,10,$doctor['email'], "1", "0", "C");
                 $pdf->cell(25,10,$doctor['position'], "1", "0", "C");
                 $pdf->cell(28,10,$doctor['medicalschool'], "1","0", "C");
                 $pdf->cell(25,10,$doctor['speciality'], "1","0", "C");
