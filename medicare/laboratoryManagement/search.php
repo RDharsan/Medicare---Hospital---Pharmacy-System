@@ -83,7 +83,7 @@ include '../connection/connect.php';
         }
         
     ?></h1><br>
-    <tr>
+    <tr style="background-color:#198754;color:white;">
       <th scope="col">Test ID</th>
       <th scope="col">Lab room</th>
       <th scope="col">Lab in-charge</th>
@@ -127,7 +127,7 @@ include '../connection/connect.php';
   <td>
   
 <button class="btn btn-primary" style="background-color:#198754"><a href="updatemedicaltest.php?updateid=' . $test_id . '" class="text-light">Update</a></button></td>
-<td><button class="btn btn-danger" "><a href="deletemedicaltest.php?deleteid=' . $test_id . '" class="text-light">Delete</a></button>
+<td><button class="btn btn-danger" " onclick="msgdlt()"><a href="deletemedicaltest.php?deleteid=' . $test_id . '" class="text-light">Delete</a></button>
 
 </td>
 </tr>';
@@ -139,6 +139,7 @@ include '../connection/connect.php';
        
         <h2 style="text-align: center;"> <?php
         echo 'Data Not Found!!';
+        echo "<script>alert('Data Not found!!')</script>";
         
       }
     }

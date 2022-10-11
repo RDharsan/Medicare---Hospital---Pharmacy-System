@@ -59,6 +59,7 @@ if (isset($_POST['submit'])) {
 
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
@@ -86,7 +87,7 @@ if (isset($_POST['submit'])) {
    
 
   
-    <form method="POST">
+    <form method="POST" name="myform" onsubmit="return updatevalidate()">
 
 
         <!-- <div class="form-group w-50"> -->

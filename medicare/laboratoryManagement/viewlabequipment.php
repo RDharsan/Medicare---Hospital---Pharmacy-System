@@ -94,7 +94,7 @@ include '../connection/connect.php';
         <td>
         
     <button class="btn btn-primary" style="background-color:#198754"><a href="updatelabequipment.php?updateid=' . $equipment_id . '" class="text-light">Update</a></button></td>
-    <td><button class="btn btn-danger"" ><a href="deletelabequipment.php?deleteid=' . $equipment_id . '" class="text-light">Delete</a></button>
+    <td><button class="btn btn-danger""  onclick="msgdlt()""><a href="deletelabequipment.php?deleteid=' . $equipment_id . '" class="text-light">Delete</a></button>
 
      </td>
       </tr>';

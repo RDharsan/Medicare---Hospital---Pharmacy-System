@@ -195,7 +195,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <br><br>
-        <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit">Update</button>
+        <button type="submit" class="btn btn-primary" onclick="msgupt()" style="background-color:#198754;margin-left:40%" name="submit">Update</button>
         <button type="reset" class="btn btn-primary" style="background-color:#198754;margin-left:1%" name="reset">Reset</button>
     </form>
 

@@ -65,14 +65,14 @@ if (isset($_POST['submit'])) {
 
 
     <div class="container my-5">
-        <form method="POST" id="">
+        <form method="POST" name="myform" onsubmit="return validatemedical()">
             <h1 style="margin-left:35% ;">Add Medical Test</h1><br><br><br>
             <!-- <div class="form-group">  -->
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
                     <label>Test Type</label>
                     <!-- <input type="text" class="form-control" placeholder="Enter test tyoe" name="test_type" autocomplete="off"> -->
-                    <select name="test_type" required class="form-control" id="test_type">
+                    <select name="test_type" required class="form-control" id="test_type" required="required">
                         <option disabled selected>Choose here</option>
                         <option>BUN</option>
                         <option>Blood Test</option>
