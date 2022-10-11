@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $address=$_POST['address'];
     $phone=$_POST['phone'];
-    $email=$_POST['email'];
+    $email=$_POST['email']; 
     $position=$_POST['position'];
     $medicalschool=$_POST['medicalschool'];
     $speciality=$_POST['speciality'];
@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
         
     }
     else{
-        document.getElementById("errormail").innerHTML="<span style='color: red;'>"+"mail id not in correct format</span>"
+        document.getElementById("errormail").innerHTML="<span style='color: red;'>"+"Mail id is not in correct format</span>"
         return false;
     }
 
@@ -126,30 +126,42 @@ if(isset($_POST['submit'])){
                 <span id="errormail"></span>
             </div>
 
+<br>
+<br>
 
-            
             <h2>Professional Information</h2>
             <div class="form-group" style="float:left; width:48%;">
                 <label >Position</label>
-                <select class="form-control" placeholder="Select Your Position" name="position" autocomplete="off" required>
+                <select class="form-control" name="position" required>
+                <option disabled selected>Select Your Position</option>
                 <option value="Physician">Physician</option> 
                 <option value="Surgeon">Surgeon</option>
                 <option value="Neutritionist">Neutritionist</option>
                 <option value="General">General</option>
                 <option value="OPD">OPD</option>
+                <option value="Neutritionist">Medical officer</option>
+                <option value="General">Ayurveda</option>
+                <option value="OPD">Veterinary</option>
+                <option value="Wayamba University">Others</option>
                 </select>
             </div>
 
 
             <div class="form-group" style="float:right; width:48%;">
                 <label>Medical_School</label>
-                <select class="form-control" placeholder="Enter Your Medi-School" name="medicalschool" autocomplete="off" required>
-            
+                <select class="form-control"  name="medicalschool"  required>
+                <option disabled selected>Select Your Medi-School</option>
                 <option value="Jayawardanapura University">Jayawardanapura University</option> 
                 <option value="Colombo University">Colombo University</option>
                 <option value="Jaffna University">Jaffna University</option>
                 <option value="Kelani University">Kelani University</option>
                 <option value="Wayamba University">Wayamba University</option>
+                <option value="Jaffna University">South Asian institute of Medicine</option>
+                <option value="Kelani University">Peradeniya University</option>
+                <option value="Wayamba University">ANC Medical placement</option>
+                <option value="Kelani University">Ruhunu University</option>
+                <option value="Wayamba University">Rajarata University</option>
+                <option value="Wayamba University">Others</option>
                 </select>   
             </div>
 
@@ -157,13 +169,19 @@ if(isset($_POST['submit'])){
 
             <div class="form-group" style="float:left; width:48%;">
                 <label>Speciality</label>
-                <select class="form-control" placeholder="Enter Your Speciality" name="speciality" autocomplete="off" required>
-           
+                <select class="form-control"  name="speciality"  required>
+                <option disabled selected>Select Your Speciality</option>
                 <option value="Nephrologist">Nephrologist</option> 
                 <option value="Dermatologist">Dermatologist</option>
                 <option value="Cardiologist">Cardiologist</option>
                 <option value="Endocrinologist">Endocrinologist</option>
                 <option value="Gynecologist">Gynecologist</option>  
+                <option value="Cardiologist">Family Medicine</option>
+                <option value="Endocrinologist">Clinical Immunology</option>
+                <option value="Gynecologist">Pediatrics</option>  
+                <option value="Cardiologist">Psychiatry</option>
+                <option value="Endocrinologist">Otolaryngology</option>
+                <option value="Wayamba University">Others</option>
                 </select>
             </div>
 
@@ -171,18 +189,24 @@ if(isset($_POST['submit'])){
 
             <div class="form-group" style="float:right; width:48%;">
                 <label>Program Director</label>
-                <select class="form-control" placeholder="Enter Your Speciality" name="director" autocomplete="off" required>
-                 
-                <option value="Dr.Somiah">Dr.Somiah</option> 
-                <option value="DDr.Sreekanth">Dr.Sreekanth</option>
-                <option value="Dr.Bandara">Dr.Bandara</option>
+                <select class="form-control"  name="director" autocomplete="off" required>
+                <option disabled selected>Select Your Speciality</option>
+                <option value="Dr.Somiah">Dr.WAS De Silva</option> 
+                <option value="DDr.Sreekanth">Dr.B.G.N.Rathnasena</option>
+                <option value="Dr.Bandara">Dr.P.N.Rajapakshe</option>
                 <option value="Dr.Sanjana">Dr.Sanjana</option>
                 <option value="Dr.Vasuki">Dr.Vasuki</option>  
+                <option value="Dr.Bandara"> Prof. Anoja Abeyjeewa.</option>
+                <option value="Dr.Sanjana">Dr.H.K.De S.Kularatne</option>
+                <option value="Dr.Vasuki"> Dr.S.D.Rajamanthri</option>
+                <option value="Dr.Sanjana">Dr.B.D.A.Perera</option>
+                <option value="Dr.Vasuki">Prof.Nirmala </option>
+                <option value="Wayamba University">Others</option>  
                 </select>
             </div>
 
-            <input type="submit" value="Submit" class="btn btn-primary" style="background-color:#198754">
-            <!--button type="submit" class="btn btn-primary" style="background-color:#198754" name="submit" >Submit</button-->
+            <!--input type="submit" value="Submit" class="btn btn-primary" style="background-color:#198754"-->
+            <button type="submit" class="btn btn-primary" style="background-color:#198754" name="submit" >Submit</button>
         </form>
         
     
