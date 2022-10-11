@@ -74,7 +74,7 @@ include 'connect.php';
         }
         
     ?></h1><br>
-    <tr>
+    <tr style="background-color:#198754;color:white;">
             <th scope="col">ID</th>
             <th scope="col">Doctor_Name</th>
             <th scope="col">Appointment_date</th>

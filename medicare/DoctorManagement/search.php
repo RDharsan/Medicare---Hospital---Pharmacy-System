@@ -80,7 +80,7 @@ include 'connect.php';
         }
         
     ?></h1><br>
-    <tr>
+    <tr style="background-color:#198754;color:white;">
       <th scope="col"> ID</th>
       <th scope="col">Name</th>
       <th scope="col">Address</th>
@@ -90,7 +90,8 @@ include 'connect.php';
       <th scope="col">Medical School</th>
       <th scope="col">Speciality</th>
       <th scope="col">Director</th>
-      <th scope="col">Operations</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
