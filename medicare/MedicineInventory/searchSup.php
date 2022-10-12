@@ -38,10 +38,14 @@ include '../connection/connect.php';
         .in-row{
             display: flex;
         }
+        /* .in-col{
+            flex: 20%;
+            padding: 20px;
+            height: 300px;
+        } */
         .tbl{
-             width: 800px!important;
-             margin-left: 150px!important;
-             margin-right: 0px !important;
+             width: 1280px!important;
+             margin-left: -60px!important;
         }
         .bb{
             /* border-color: #04AA6D!important; */
@@ -113,7 +117,7 @@ include '../connection/connect.php';
         <div class="container">
 
 
-        <table class="table tbl">
+        <table class="table">
         <thead>
     <!-- <h1 style="text-align: center;"><?php  
         if(isset($_POST['submit'])){
@@ -121,10 +125,10 @@ include '../connection/connect.php';
         echo $search;
         }
         ?></h1> -->
-        <tr style="background-color:#198754;color:white;">
+        <tr>
             <th scope="col">SID</th>
             <th scope="col">Supplier Name</th>
-            <th scope="col">Country Name</th>
+            <th scope="col">address</th>
             <th scope="col">Phone No</th>
             <th scope="col">Operations</th>
         </tr>
@@ -142,17 +146,19 @@ include '../connection/connect.php';
       while ($row = mysqli_fetch_assoc($result)) {
            $sid = $row['sid'];
            $supplierName = $row['supplierName'];
-           $country = $row['country'];
+           $address = $row['address'];
            $phoneNo = $row['phoneNo'];
 
         echo  '<tr>
            <th scope="row">' . $sid . '</th>
            <td>' . $supplierName . '</td>
-           <td>' . $country . '</td>
+           <td>' . $address . '</td>
            <td>' . $phoneNo . '</td>         
-           <td>                       
-           <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button>
-           <button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" class="text-light">Delete</a></button>
+    
+           <td>
+                                    
+           <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button><td>
+           <td><button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" class="text-light">Delete</a></button>
            </td>
 </tr>';
       }

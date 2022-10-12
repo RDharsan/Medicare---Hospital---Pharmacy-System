@@ -31,7 +31,11 @@
         .in-row{
             display: flex;
         }
-
+        /* .in-col{
+            flex: 20%;
+            padding: 20px;
+            height: 300px;
+        } */
         .tbl{
              width: 1280px!important;
              margin-left: -60px!important;
@@ -83,6 +87,12 @@
     </form> 
     </div>
     
+   
+
+
+
+
+
 
 
     <!-- Footer -->

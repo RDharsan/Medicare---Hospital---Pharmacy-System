@@ -2,15 +2,15 @@
 include '../connection/connect.php';
 if(isset($_POST['submit'])){
     $sname=$_POST['sname'];
-    $country=$_POST['country'];
+    $address=$_POST['address'];
     $code=$_POST['code'];
 
     $no=$_POST['no'];
  
     $phoneNo=$_POST['code']." ".$_POST['no'];
 
-    $sql="insert into `supplier`(supplierName,country,phoneNo)
-    values('$sname','$country','$phoneNo')";
+    $sql="insert into `supplier`(supplierName,address,phoneNo)
+    values('$sname','$address','$phoneNo')";
 
     print($sql);
     $result=mysqli_query($con,$sql);
@@ -21,6 +21,7 @@ if(isset($_POST['submit'])){
     }
 
 }
+
 ?>
 
 
@@ -116,8 +117,8 @@ if(isset($_POST['submit'])){
         </div>
 
         <div class="form-group">
-            <label >Country Name:</label>
-            <input type="text" class="form-control" placeholder="Type Country Name" name="country"/>
+            <label >Address:</label>
+            <input type="text" class="form-control" placeholder="Type Address" name="address"/>
         </div>
 
         
@@ -125,15 +126,8 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
         <label>Phone No:</label>
-            <div class="in-row">
-                <select  class="form-control sside" name="code" >
-                <option value="" disabled selected>Country</option>
-                <option value="" data-dialcode="">Please select</option>
-                <option value="+43" data-dialcode="+43">Austria</option>
-                <option value="+263" data-dialcode="+263">Zimbabwe</option>
-                </select>
-                <input type="text" class="form-control " placeholder="   X X X   X X X X   X X X " name="no">
-            </div>
+        <input type="text" class="form-control " placeholder="   X X X   X X X X   X X X " name="no">
+        
         </div>
 
         

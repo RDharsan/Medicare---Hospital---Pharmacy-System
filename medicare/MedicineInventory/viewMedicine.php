@@ -7,6 +7,12 @@ include '../connection/connect.php';
 <html lang="en">
 <head>
 <style>
+        /* .side{
+            width: 300px!important;          
+        }
+        .sside{
+            width: 300px!important;
+        } */
         .button2 {
             background-color: #198754;
             width: 100px;
@@ -35,6 +41,11 @@ include '../connection/connect.php';
         .in-row{
             display: flex;
         }
+        /* .in-col{
+            flex: 20%;
+            padding: 20px;
+            height: 300px;
+        } */
         .tbl{
              width: 1280px!important;
              margin-left: -60px!important;
@@ -83,7 +94,7 @@ include '../connection/connect.php';
 
     <table class="table tbl">
   <thead>
-    <tr style="background-color:#198754;color:white;">
+    <tr>
         <th scope="col">MID</th>
         <th scope="col">Medicine Type</th>
         <th scope="col">Medicine Name</th>
@@ -128,7 +139,7 @@ include '../connection/connect.php';
         <td>'.$dosageAmount.'</td>
         <td>'.$units.'</td>
         <td>
-        <button class="btn bb" style="background-color:#198754"><a href="medUpdate.php?updateid='.$mid.'" class="text-light">Update</a></button>
+        <button class="btn bb" style="background-color:#198754"><a href="medUpdate.php?updateid='.$mid.'" class="text-light">Update</a></button><td>
         <button class="btn bbb" style="background-color:#198754;"><a href="medDelete.php?deleteid='.$mid.'" class="text-light">Delete</a></button>
     </td>
       </tr>';

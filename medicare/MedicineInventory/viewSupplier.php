@@ -6,6 +6,12 @@ include '../connection/connect.php';
 <html lang="en">
 <head>
 <style>
+        /* .side{
+            width: 300px!important;          
+        }
+        .sside{
+            width: 300px!important;
+        } */
         .button2 {
             background-color: #198754;
             width: 100px;
@@ -34,6 +40,11 @@ include '../connection/connect.php';
         .in-row{
             display: flex;
         }
+        /* .in-col{
+            flex: 20%;
+            padding: 20px;
+            height: 300px;
+        } */
         .bb{
             /* border-color: #04AA6D!important; */
             background-color: #198754!important;
@@ -82,10 +93,10 @@ include '../connection/connect.php';
 
     <table class="table tbl">
   <thead>
-    <tr style="background-color:#198754;color:white;">
+    <tr>
         <th scope="col">SID</th>
         <th scope="col">Supplier Name</th>
-        <th scope="col">Country Name</th>
+        <th scope="col">Address</th>
         <th scope="col">Phone No</th>
         <th scope="col">Operations</th>
     </tr>
@@ -99,12 +110,12 @@ if($result){
   while($row=mysqli_fetch_assoc($result)){
       $sid=$row['sid'];
       $supplierName=$row['supplierName'];
-      $country=$row['country'];
+      $address=$row['address'];
       $phoneNo=$row['phoneNo'];
       echo ' <tr>
       <th scope="row">'.$sid.'</th>
       <td>'.$supplierName.'</td>
-      <td>'.$country.'</td>
+      <td>'.$address.'</td>
       <td>'.$phoneNo.'</td>
       <td>
       <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button>

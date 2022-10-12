@@ -14,7 +14,7 @@
 
     $pdf->cell(10,10,"SID", "1", "0", "C");
     $pdf->cell(30,10,"Supplier Name", "1", "0", "C");
-    $pdf->cell(30,10,"Country Name", "1", "0", "C");
+    $pdf->cell(30,10,"Address", "1", "0", "C");
     $pdf->cell(30,10,"Phone No", "1", "0", "C");
     $pdf->Ln();
     $pdf->SetFont("Arial", "", 10);
@@ -30,7 +30,7 @@
             while($supplier = $result->fetch()){
                 $pdf->cell(10,10,$supplier['sid'], "1", "0", "C");
                 $pdf->cell(30,10,$supplier['supplierName'], "1", "0", "C");
-                $pdf->cell(30,10,$supplier['country'], "1", "0", "C");
+                $pdf->cell(30,10,$supplier['address'], "1", "0", "C");
                 $pdf->cell(30,10,$supplier['phoneNo'], "1","1", "C");
             }
         }else{
