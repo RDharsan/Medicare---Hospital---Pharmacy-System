@@ -38,11 +38,6 @@ include '../connection/connect.php';
         .in-row{
             display: flex;
         }
-        /* .in-col{
-            flex: 20%;
-            padding: 20px;
-            height: 300px;
-        } */
         .tbl{
              width: 1280px!important;
              margin-left: -60px!important;
@@ -125,7 +120,7 @@ include '../connection/connect.php';
         </form>
 
         <div class="container">
-            <table class="table">
+            <table class="table tbl">
                 <thead>
                     <!-- <h1 style="text-align: center;">
                     <?php  
@@ -135,7 +130,7 @@ include '../connection/connect.php';
                         }
                         
                     ?></h1> -->
-                    <tr>
+                    <tr style="background-color:#198754;color:white;">
                         <th scope="col">MID</th>
                         <th scope="col">Medicine Type</th>
                         <th scope="col">Medicine Name</th>
@@ -185,8 +180,8 @@ include '../connection/connect.php';
                                     <td>'.$units.'</td>
                                     <td>
                                     
-                                    <button class="btn bb" style="background-color:#198754"><a href="medUpdate.php?updateid='.$mid.'" class="text-light">Update</a></button><td>
-                                    <td><button class="btn bbb" style="background-color:#198754;"><a href="medDelete.php?deleteid='.$mid.'" class="text-light">Delete</a></button>
+                                    <button class="btn bb" style="background-color:#198754"><a href="medUpdate.php?updateid='.$mid.'" class="text-light">Update</a></button>
+                                    <button class="btn bbb" style="background-color:#198754;"><a href="medDelete.php?deleteid='.$mid.'" class="text-light">Delete</a></button>
                                     </td>
                                     </tr>';
                                         }
