@@ -68,7 +68,7 @@ include '../connection/connect.php';
         echo $search;
         }
     ?></h1><br>
-    <tr>
+    <tr style="background-color:#198754;color:white;">
       <th scope="col">PID</th>
       <th scope="col">NAME</th>
       <th scope="col">NIC</th>

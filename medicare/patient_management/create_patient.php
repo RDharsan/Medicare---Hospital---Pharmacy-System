@@ -99,25 +99,6 @@ if (isset($_POST['submit'])) {
                 <button type="reset" class="btn btn-primary" style="background-color:#198754" name="reset">Reset</button>
         </form>
 
-        <script  type="text/javascript">
-            var frmvalidator = new Validator("patient_form");
-            frmvalidator.addValidation("name","req","Please enter your First Name");
-            frmvalidator.addValidation("name","maxlen=20",
-                    "Max length for FirstName is 20");
-
-            frmvalidator.addValidation("nic","req");
-            frmvalidator.addValidation("nic","maxlen=20");
-
-            frmvalidator.addValidation("t_phone","maxlen=20");
-            frmvalidator.addValidation("t_phone","req");
-    
-            frmvalidator.addValidation("Phone","maxlen=50");
-            frmvalidator.addValidation("Phone","numeric");
-
-            frmvalidator.addValidation("address","maxlen=50");
-            frmvalidator.addValidation("gender","dontselect=Choose Here");
-
-        </script>
 
 
     </div>

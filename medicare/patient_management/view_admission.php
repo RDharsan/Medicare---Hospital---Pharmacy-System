@@ -81,7 +81,7 @@ if($result){
         <td>'.$checkup_type.'</td>
         <td>'.$consulting_doc.'</td>
        <td>
-        <button class="btn btn-danger"><a href="delete_patient.php?deleteid='.$aid.'" class="text-light">Delete</a></button>
+        <button class="btn btn-danger"><a href="admission_delete.php?deleteid='.$aid.'" class="text-light">Delete</a></button>
 
      </td>
       </tr>';

@@ -37,6 +37,30 @@ if (isset($_POST['submit'])) {
     <title>Add Patient</title>
 </head>
 
+<!-- <script type="text/javascript">
+    function validate(){
+    var phone = document.forms["myform"]["telephone"].value;
+    if(isNaN(telephone)){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Only digits allowed for Phone number</span>"
+        return false;
+    }
+
+    else if(telephone.length>10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(telephone.length<10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(telephone.charAt(0)==9){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Starting number 9 not allowed</span>"
+        return false;
+    }
+ </script>    -->
+
 <body>
 
     <!-- header -->
@@ -57,29 +81,30 @@ if (isset($_POST['submit'])) {
 
     </div>
     <div class="container my-5">
-        <form method="POST">
+        <form name="myform" onsubmit="return validate()"  method="POST" >
         <h1 style="margin-left:35% ;">Add Patient Details</h1>
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
 
                     <br><label>Patient ID</label>
-                    <input type="text" class="form-control" placeholder="Enter Patient ID" name="pid"  required>
+                    <input type="text" class="form-control" placeholder="Enter Patient ID" name="pid" autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>Patient Telephone number</label>
-                    <input type="text" class="form-control" placeholder="Enter Patient Telephone number" name="telephone"  required>
+                    <input type="text" class="form-control" placeholder="Enter Patient Telephone number" name="telephone" autocomplete="off" required>
+                    <span id="error"></span>
                 </div>
                 <div class="col-md-5">
                 <br><label>Admission Date</label>
-                    <input type="date" class="form-control" placeholder="Select admission date" name="a_date"  required>
+                    <input type="date" class="form-control" placeholder="Select admission date" name="a_date" autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>Admission Time</label>
-                    <input type="time" class="form-control" placeholder="Select Admission Time" name="a_time"  required>
+                    <input type="time" class="form-control" placeholder="Select Admission Time" name="a_time" autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>Check Up Type</label>
-                    <select name="checkup_type" id="checkup_type" class="form-control" required>
+                    <select name="checkup_type" id="checkup_type" class="form-control" autocomplete="off" required>
                         <option disabled selected> Choose Here </option>
                         <option value="OPD">OPD</option>
                         <option value="Blood Test">Blood Test</option>
@@ -92,7 +117,21 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-md-5">
                 <br><label>Consulting Doctor</label>
-                    <input type="text" class="form-control" placeholder="Enter Doctor name" name="consulting_doc"  required>
+                <select class="form-control"  name="consulting_doc" autocomplete="off" required>
+                <option disabled selected>Select Consulting Doctor</option>
+                <option value="Dr.Somiah">Dr.W.A.S De Silva</option> 
+                <option value="Dr.Sreekanth">Dr.B.G.N.Rathnasena</option>
+                <option value="Dr.Bandara">Dr.P.N.Rajapakshe</option>
+                <option value="Dr.Sanjana">Dr.Sanjana</option>
+                <option value="Dr.Vasuki">Dr.Vasuki</option>  
+                <option value="Dr.Bandara"> Prof. Anoja Abeyjeewa.</option>
+                <option value="Dr.Sanjana">Dr.H.K.De S.Kularatne</option>
+                <option value="Dr.Vasuki"> Dr.S.D.Rajamanthri</option>
+                <option value="Dr.Sanjana">Dr.B.D.A.Perera</option>
+                <option value="Dr.Vasuki">Prof.Nirmala </option>
+                <option value="Others">Others</option>  
+                </select>
+            
                 </div>
             </div> 
                 <br>
