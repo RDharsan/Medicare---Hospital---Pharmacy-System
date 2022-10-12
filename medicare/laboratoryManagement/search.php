@@ -137,7 +137,7 @@ include '../connection/connect.php';
       else{
         ?>
        
-        <h2 style="text-align: center;"> <?php
+        <h2 style="text-align: center; color:red"> <?php
         echo 'Data Not Found!!';
         echo "<script>alert('Data Not found!!')</script>";
         

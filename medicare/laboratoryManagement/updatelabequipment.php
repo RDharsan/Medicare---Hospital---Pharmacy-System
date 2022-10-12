@@ -95,33 +95,36 @@ if (isset($_POST['submit'])) {
             <div class="col-md-5" style="margin-bottom:30px ;">
                 <label>Equipment:</label>
                 <!-- <input type="text" class="form-control" placeholder="Enter test tyoe" name="test_type" autocomplete="off" value="<?php echo $test_type ?>"> -->
-                <input type="text" class="form-control" placeholder="Enter equipment name" name="equipment" autocomplete="off" required value="<?php echo $equipment?>">
-
+                <input type="text" class="form-control" placeholder="Enter equipment name" name="equipment" autocomplete="off"  value="<?php echo $equipment?>">
+                <span id="errorEq"></span>
             </div>
             <div class="col-md-5">
                     <label>Model:</label>
-                    <input type="text" class="form-control"  placeholder="Enter Equipment Model" name="model" autocomplete="off" value="<?php echo $model?>" required>
+                    <input type="text" class="form-control"  placeholder="Enter Equipment Model" name="model" autocomplete="off" value="<?php echo $model?>" >
+                    <span id="errorModel"></span>
                     <br>
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Insurance Date:</label>
-                    <input type="date" class="form-control" placeholder="Select Insurance applied date" name="insurance_date" autocomplete="off" value="<?php echo $insurance_date?>"required>
+                    <input type="date" class="form-control" placeholder="Select Insurance applied date" name="insurance_date" autocomplete="off" value="<?php echo $insurance_date?>">
+                    <span id="errorIns"></span>
                 </div>
 
       
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Cost:</label>
-                    Rs.<input type="number" class="form-control" placeholder="Enter Amount: Rs.10000" min="0" name="cost" autocomplete="off" value="<?php echo $cost?>" required>
+                    Rs.<input type="number" class="form-control" placeholder="Enter Amount: Rs.10000" min="0" name="cost" autocomplete="off" value="<?php echo $cost?>" >
+                    <span id="errorCost"></span>
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <br><label>Estimated Lifespan:(Digit)</label>
-                    <input type="number" class="form-control" placeholder="Eg: 10 yrs" min="0"  name="estimated_lifespan" autocomplete="off" value="<?php echo $estimated_lifespan?>" required>
-                   
+                    <input type="number" class="form-control" placeholder="Eg: 10 yrs" min="0"  name="estimated_lifespan" autocomplete="off" value="<?php echo $estimated_lifespan?>" >
+                    <span id="errorLife"></span>
                 </div>
         </div>
         <br><br>

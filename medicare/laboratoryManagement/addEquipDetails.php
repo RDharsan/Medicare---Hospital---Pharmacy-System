@@ -54,6 +54,8 @@ if (isset($_POST['submit'])) {
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+    
 
     <script type="text/javascript"></script>
     <script type="text/javascript" src="index.js"></script>
@@ -93,6 +95,7 @@ if (isset($_POST['submit'])) {
 
 
     <div class="container my-5">
+    <!-- onsubmit="return validate()" -->
         <form method="POST" autocomplete="off" name="myform" onsubmit="return validate()">
             <h1 style="margin-left:25% ;">Add Lab Equipment Details</h1><br><br><br>
             <!-- <div class="form-group">  -->
@@ -100,7 +103,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                     <label>Equipment:</label>
                     <input type="text" class="form-control" placeholder="Enter equipment name" name="equipment" id="equipment" autocomplete="off">
-
+                    <span id="errorEq"></span>
 
                     <br>
                 </div>
@@ -109,7 +112,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                     <label>Model:</label>
                     <input type="text" class="form-control" placeholder="Enter Equipment Model" name="model" id="model" autocomplete="off">
-
+                    <span id="errorModel"></span>
                     <br>
 
                 </div>
@@ -119,7 +122,7 @@ if (isset($_POST['submit'])) {
                 
                         <label>Insurance Date:</label>
                         <input type="date" min="2021-01-01" onchange="datepick()" placeholder="Select Insurance applied date" class="form-control" name="insurance_date" id="insurance_date" autocomplete="off">
-                 
+                        <span id="errorIns"></span>
                 </div>
 
 
@@ -127,13 +130,14 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                     <label>Cost:</label>
                     Rs.<input type="number" class="form-control" placeholder="Enter Amount: Rs.10000" min="0" name="cost" id="cost" autocomplete="off">
+                    <span id="errorCost"></span>
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <br><label>Estimated Lifespan:(Digit)</label>
                     <input type="number" class="form-control" placeholder="Eg: 10 yrs" min="0" name="estimated_lifespan" id="estimated_lifespan" autocomplete="off">
-
+                    <span id="errorlife"></span>
 
                 </div>
 

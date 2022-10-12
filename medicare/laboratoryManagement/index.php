@@ -65,7 +65,7 @@ include '../connection/connect.php';
                                         <button class="btn btn-primary" style="background-color:#198754" ><a href="medicaltest_pdf.php?id=<?php echo $medicaltest['test_id'];?> " class="text-light">View Online</a></button>
                                     </td>
                                     <td>
-                                    <button class="btn btn-primary" onclick="pdfmsg()"style="background-color:#198754" ><a href="medicaltest_pdf2.php?id=<?php echo $medicaltest['test_id'];?>" class="text-light" download="medicaltest_pdf2.php?id=<?php echo $medicaltest['test_id'];?>">Download Now</a>
+                                    <button class="btn btn-primary" onclick="pdfmsg()"style="background-color:#198754" ><a href="medicaltest_pdf.php?id=<?php echo $medicaltest['test_id'];?>" class="text-light" download="medicaltest_pdf.php?id=<?php echo $medicaltest['test_id'];?>">Download Now</a>
                                     </td>
                                 </tr>
                         <?php
@@ -109,7 +109,7 @@ include '../connection/connect.php';
                                         <button class="btn btn-primary" style="background-color:#198754" ><a href="labeq_pdf.php?id=<?php echo $labeq['equipment_id'];?> " class="text-light">View Online</a></button>
                                     </td>
                                     <td>
-                                    <button class="btn btn-primary" style="background-color:#198754" onclick="pdfmsg()" ><a href="labeq_pdf2.php?id=<?php echo $labeq['equipment_id'];?>" class="text-light" download="labeq_pdf2.php?id=<?php echo $labeq['equipment_id'];?>">Download Now</a>
+                                    <button class="btn btn-primary" style="background-color:#198754" onclick="pdfmsg()" ><a href="labeq_pdf.php?id=<?php echo $labeq['equipment_id'];?>" class="text-light" download="labeq_pdf.php?id=<?php echo $labeq['equipment_id'];?>">Download Now</a>
                                     </td>
                                 </tr>
                         <?php

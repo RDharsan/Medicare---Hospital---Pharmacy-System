@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
 
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
-    
+
 
 
 </head>
@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                     <label>Test Type</label>
                     <!-- <input type="text" class="form-control" placeholder="Enter test tyoe" name="test_type" autocomplete="off"> -->
-                    <select name="test_type" required class="form-control" id="test_type" required="required">
+                    <!-- <select name="test_type" required class="form-control" id="test_type">
                         <option disabled selected>Choose here</option>
                         <option>BUN</option>
                         <option>Blood Test</option>
@@ -84,14 +84,31 @@ if (isset($_POST['submit'])) {
                         <option>Nutrient and vitamin level tests</option>
                         <option>Hormone level tests</option>
                         <option>Cholesterol level tests</option>
-                    </select>
+                    </select> -->
+
+                    <input type="text" class="form-control" name="test_type" list="testType" autocomplete="off" placeholder="Enter/select test type">
+                    <datalist id="testType" name="test_type">
+                        <option disabled selected>Choose here</option>
+                        <option>BUN</option>
+                        <option>Blood Test</option>
+                        <option>Infectious disease tests</option>
+                        <option>Sexually transmitted infection tests</option>
+                        <option>Tumor and cancer marker tests</option>
+                        <option>ANA</option>
+                        <option>CRP</option>
+                        <option>Nutrient and vitamin level tests</option>
+                        <option>Hormone level tests</option>
+                        <option>Cholesterol level tests</option>
+                    </datalist>
+                    <span id="errorType"></span>
                     <br>
                 </div>
 
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Lab room number:</label>
-                    <input type="number" class="form-control" min=0 max=100 placeholder="Enter lab room No" name="lab_room" id="lab_room" autocomplete="off" required>
+                    <input type="number" class="form-control" min=0 max=100 placeholder="Enter lab room No" name="lab_room" id="lab_room" autocomplete="off">
+                    <span id="errorLab"></span>
                     <br>
                 </div>
 
@@ -108,7 +125,10 @@ if (isset($_POST['submit'])) {
                     $sql1 = "select name from `doctor`";
                     $result1 = mysqli_query($con, $sql1);
                     ?>
-                    <select name="lab_incharge" class="form-control" id="lab_incharge">
+                    <input type="text" class="form-control" name="lab_incharge" list="lab_incharge" autocomplete="off" placeholder="Enter/select Lab Incharge Name">
+
+                    <!-- <select name="lab_incharge" class="form-control" id="lab_incharge"> -->
+                    <datalist name="lab_incharge" id="lab_incharge">
                         <option disabled selected>Choose doctor</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -120,7 +140,9 @@ if (isset($_POST['submit'])) {
                         <?php
                         }
                         ?>
-                    </select>
+                    </datalist>
+                    <!-- </select> -->
+                    <span id="errorIn"></span>
 
                     <br>
                 </div>
@@ -140,7 +162,9 @@ if (isset($_POST['submit'])) {
                     $sql1 = "select name from `nurse`";
                     $result1 = mysqli_query($con, $sql1);
                     ?>
-                    <select name="nurse" class="form-control" id="nurse">
+                    <input type="text" class="form-control" name="nurse" list="nurse" autocomplete="off" placeholder="Enter/select Nurse Name">
+
+                    <datalist name="nurse" id="nurse">
                         <option disabled selected>Choose here</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -152,7 +176,8 @@ if (isset($_POST['submit'])) {
                         <?php
                         }
                         ?>
-                    </select>
+                    </datalist>
+                    <span id="errorNurse"></span>
 
 
                     <br>
@@ -167,7 +192,9 @@ if (isset($_POST['submit'])) {
                     $sql1 = "select name from `doctor`";
                     $result1 = mysqli_query($con, $sql1);
                     ?>
-                    <select name="test_doneby" class="form-control" id="test_doneby">
+                    <input type="text" class="form-control" name="test_doneby" list="test_doneby" autocomplete="off" placeholder="Enter/select test done doctor Name">
+
+                    <datalist name="test_doneby"  id="test_doneby">
                         <option disabled selected>Choose here</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -179,14 +206,16 @@ if (isset($_POST['submit'])) {
                         <?php
                         }
                         ?>
-                    </select>
+                    </datalist>
+                    <span id="errorDoneBy"></span>
 
                     <br>
                 </div>
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Test done date:</label>
-                    <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" id="test_date" required>
+                    <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" id="test_date">
+                    <span id="errorDate"></span>
                     <br>
                 </div>
             </div>
