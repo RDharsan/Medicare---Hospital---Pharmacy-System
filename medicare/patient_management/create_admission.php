@@ -26,17 +26,6 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="secondNav.css">
-    <title>Add Patient</title>
-</head>
-
 <!-- <script type="text/javascript">
     function validate(){
     var phone = document.forms["myform"]["telephone"].value;
@@ -59,7 +48,22 @@ if (isset($_POST['submit'])) {
         document.getElementById("error").innerHTML="<span style='color: red;'>"+"Starting number 9 not allowed</span>"
         return false;
     }
- </script>    -->
+
+} 
+
+</script>  -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="secondNav.css">
+    <title>Add Patient</title>
+</head>
+
+  
 
 <body>
 
