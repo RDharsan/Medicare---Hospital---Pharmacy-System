@@ -139,10 +139,10 @@ if(isset($_POST['submit'])){
                 <option value="Neutritionist">Neutritionist</option>
                 <option value="General">General</option>
                 <option value="OPD">OPD</option>
-                <option value="Neutritionist">Medical officer</option>
-                <option value="General">Ayurveda</option>
-                <option value="OPD">Veterinary</option>
-                <option value="Wayamba University">Others</option>
+                <option value="edical officer">Medical officer</option>
+                <option value="Ayurveda">Ayurveda</option>
+                <option value="Veterinary">Veterinary</option>
+                <option value="Others">Others</option>
                 </select>
             </div>
 
