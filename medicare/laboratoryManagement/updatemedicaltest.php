@@ -57,6 +57,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
+      <script type="text/javascript" src="index.js"></script>
 
 
 
@@ -92,7 +93,7 @@ if (isset($_POST['submit'])) {
 
 
   
-    <form method="POST">
+    <form method="POST" onsubmit="return msgupt()" >
 
 
         <!-- <div class="form-group w-50"> -->
@@ -113,10 +114,12 @@ if (isset($_POST['submit'])) {
                     <option>Hormone level tests</option>
                     <option>Cholesterol level tests</option>
                 </select>
+                <span id="errorType"></span>
             </div>
             <div class="col-md-5" style="margin-bottom:30px ;">
                 <label>Lab room number:</label>
                 <input type="number" class="form-control" min=0 placeholder="Enter lab room No" name="lab_room" autocomplete="off" value="<?php echo $lab_room ?>" required>
+                <span id="errorLab"></span>
             </div>
             <div class="col-md-5" style="margin-bottom:30px ;">
                 <label>Lab in charge:</label>
@@ -140,6 +143,7 @@ if (isset($_POST['submit'])) {
                     }
                     ?>
                 </select>
+                <span id="errorIn"></span>
             </div>
             <div class="col-md-5" style="margin-bottom:30px ;">
                 <label>Nurse:</label>
@@ -163,6 +167,7 @@ if (isset($_POST['submit'])) {
                     }
                     ?>
                 </select>
+                <span id="errorNurse"></span>
             </div>
             <div class="col-md-5" style="margin-bottom:30px ;">
                 <label>Test done by:</label>
@@ -188,14 +193,16 @@ if (isset($_POST['submit'])) {
 
                     ?>
                 </select>
+                <span id="errorDoneBy"></span>
             </div>
             <div class="col-md-5" style="margin-bottom:30px ;">
                 <label>Test done date:</label>
-                <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" value="<?php echo $test_date ?>" required>
+                <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" value="<?php echo $test_date ?>" required >
+                <span id="errorDate"></span>
             </div>
         </div>
         <br><br>
-        <button type="submit" class="btn btn-primary" onclick="msgupt()" style="background-color:#198754;margin-left:40%" name="submit">Update</button>
+        <button type="submit" class="btn btn-primary"  style="background-color:#198754;margin-left:40%" name="submit">Update</button>
         <button type="reset" class="btn btn-primary" style="background-color:#198754;margin-left:1%" name="reset">Reset</button>
     </form>
 
