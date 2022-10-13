@@ -125,10 +125,10 @@ include '../connection/connect.php';
         echo $search;
         }
         ?></h1> -->
-        <tr>
+        <tr style="background-color:#198754;color:white;">
             <th scope="col">SID</th>
             <th scope="col">Supplier Name</th>
-            <th scope="col">address</th>
+            <th scope="col">Address</th>
             <th scope="col">Phone No</th>
             <th scope="col">Operations</th>
         </tr>
@@ -157,8 +157,8 @@ include '../connection/connect.php';
     
            <td>
                                     
-           <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button><td>
-           <td><button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" class="text-light">Delete</a></button>
+           <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button>
+            <button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" class="text-light">Delete</a></button>
            </td>
 </tr>';
       }

@@ -31,6 +31,7 @@ if(isset($_POST['submit'])){
 <html lang="en">
   <head>
 
+  
   <style>
         .container{
             max-width: 500px!important;
