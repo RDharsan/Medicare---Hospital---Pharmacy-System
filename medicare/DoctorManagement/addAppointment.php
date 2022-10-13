@@ -25,6 +25,8 @@ if(isset($_POST['submit'])){
 <html lang="en">
 
 <head>
+
+<script type="text/javascript" src="validations.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -52,6 +54,7 @@ if(isset($_POST['submit'])){
             <li><a href="search.php" class="list">Search Doctor</a></li>
             <li><a href="searchApp.php" class="list">Search Appointment</a></li>
             <li><a href="report.php" class="list">Report</a></li>
+            <!-- style="margin-left: -60px;" -->
         </ul>
 
     </div>
@@ -59,17 +62,20 @@ if(isset($_POST['submit'])){
     <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:25px; margin-top:25px;" onclick="location.href='viewAppointment.php'" name="back">Back</button><br>
 
     <div class="container my-5">
-        <form method="POST">
+        <form name="myform" onsubmit="return validateApp()" method="POST">
             <h2 style="text-align:center; margin-top:-15px;"><b>Add Appointment Details</b></h2>
             
             <div class="form-group" style="float:left; width:48%;">
                 <label style="font-size: 20px; ">Doctor_Name</label>
                 <select style="font-size:15px; " class="form-control" placeholder="Enter Patient" name="Dr_Name" autocomplete="off" required> 
+                <option required disabled selected>Select Doctor Name</option>
                 <option value="Dr.Somiah">Dr.Somiah</option> 
                 <option value="DDr.Sreekanth">Dr.Sreekanth</option>
                 <option value="Dr.Bandara">Dr.Bandara</option>
                 <option value="Dr.Sanjana">Dr.Sanjana</option>
                 <option value="Dr.Vasuki">Dr.Vasuki</option>  
+                <option value="r.H.K.De S.Kularatne">Dr.H.K.De S.Kularatne</option>
+                <option value="r.S.D.Rajamanthri"> Dr.S.D.Rajamanthri</option>
                 </select>
             </div>
 
@@ -101,8 +107,8 @@ if(isset($_POST['submit'])){
 
             <div class="form-group" style="float:left; width:48%;">
                 <label style="font-size: 20px; ">Speciality</label>
-                <select style="font-size:15px; " class="form-control" placeholder="Select Doctor Speciality" name="speciality" autocomplete="off" required>
-           
+                <select style="font-size:15px; " class="form-control"  name="speciality" autocomplete="off" required>
+                <option required disabled selected>Select Doctor Speciality</option>
                 <option value="Nephrologist">Nephrologist</option> 
                 <option value="Dermatologist">Dermatologist</option>
                 <option value="Cardiologist">Cardiologist</option>
@@ -120,7 +126,7 @@ if(isset($_POST['submit'])){
             <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Patient Name</label>
                 <input style="font-size: 15px;" type="text" class="form-control" placeholder="Enter Patient name" name="patient_name" autocomplete="off" required>
-                 
+                <span id="errorpname"></span>
                
             </div>
 

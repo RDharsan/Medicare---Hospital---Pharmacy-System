@@ -7,6 +7,8 @@ include 'connect.php';
 <html lang="en">
 
 <head>
+<script type="text/javascript" src="validations.js"></script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +40,7 @@ include 'connect.php';
         <li><a href="search.php" class="list">Search Doctor</a></li>
         <li><a href="searchApp.php" class="list">Search Appointment</a></li>
         <li><a href="report.php" class="list"> Report</a></li>
+        <!-- style="margin-left: -60px;" -->
     </ul>
 
 </div> 
@@ -96,7 +99,7 @@ include 'connect.php';
        <button class="btn btn-primary" style="background-color:#198754"><a href="updateAppointment.php?updateid=' . $id . '" class="text-light">Update</a></button>
        </td>
        <td>
-       <button class="btn btn-danger" ><a href="deleteAppointment.php?deleteid=' . $id . '" class="text-light">Delete</a></button>
+       <button class="btn btn-danger" ><a href="deleteAppointment.php?deleteid=' . $id . '" onclick="return myFunction()" class="text-light">Delete</a></button>
    
         </td>
          </tr>';

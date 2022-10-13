@@ -65,6 +65,7 @@ if(isset($_POST['submit'])){
             <li><a href="search.php" class="list">Search Doctor</a></li>
             <li><a href="searchApp.php" class="list">Search Appointment</a></li>
             <li><a href="report.php" class="list">Report</a></li>
+            <!-- style="margin-left: -60px;" -->
         </ul>
 
     </div>
@@ -82,7 +83,9 @@ if(isset($_POST['submit'])){
                  <option value="DDr.Sreekanth">Dr.Sreekanth</option>
                  <option value="Dr.Bandara">Dr.Bandara</option>
                  <option value="Dr.Sanjana">Dr.Sanjana</option>
-                 <option value="Dr.Vasuki">Dr.Vasuki</option>  
+                 <option value="Dr.Vasuki">Dr.Vasuki</option> 
+                 <option value="r.H.K.De S.Kularatne">Dr.H.K.De S.Kularatne</option>
+                <option value="r.S.D.Rajamanthri"> Dr.S.D.Rajamanthri</option> 
                  </select>
             </div>
 
@@ -99,7 +102,7 @@ if(isset($_POST['submit'])){
             </div>
 
           
-            <div class="form-group" style="float:left; width:48%;">
+            <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Status</label>
                 <select style="font-size:15px; " class="form-control" placeholder="Select Status" name="status" autocomplete="off">
                 <option><?php echo $status ?></option>
@@ -121,13 +124,20 @@ if(isset($_POST['submit'])){
                 <option value="Cardiologist">Cardiologist</option>
                 <option value="Endocrinologist">Endocrinologist</option>
                 <option value="Gynecologist">Gynecologist</option>
+                <option value="Family Medicine">Family Medicine</option>
+                <option value="Clinical Immunology">Clinical Immunology</option>
+                <option value="Pediatrics">Pediatrics</option>  
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Otolaryngology">Otolaryngology</option>
+                <option value="Others">Others</option> 
                 </select>
             </div>
             
 
             <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Patient Name</label>
-                <input style="font-size: 15px;" type="text" class="form-control" placeholder="Enter Patient name" name="patient_name" autocomplete="off">
+                <input style="font-size: 15px;" type="text" class="form-control" placeholder="Enter Patient name" name="patient_name" autocomplete="off" value="<?php echo $patient_name?>">
+                <span id="errorpname"></span>
             </div>
 
 

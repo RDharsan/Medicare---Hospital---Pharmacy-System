@@ -40,6 +40,7 @@ include 'connect.php';
             <li><a href="search.php" class="list">Search Doctor</a></li>
             <li><a href="searchApp.php" class="list" id="active" style="color:white">Search Appointment</a></li>
             <li><a href="report.php" class="list"> Report</a></li>
+            <!-- style="margin-left: -60px;" -->
     </ul>
 
 </div>
