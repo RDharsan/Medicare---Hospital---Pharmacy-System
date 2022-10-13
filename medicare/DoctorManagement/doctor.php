@@ -103,37 +103,39 @@ if(isset($_POST['submit'])){
 
 
     <div class="container my-5">
+   
         <form name="myform" onsubmit="return validate()" method="POST" >
-            <h2>Personal Information</h2>
+        <h2 style="text-align:center;"><b>DOCTOR REGISTRATION</b></h2><br><br>
+        <h2>Personal Information</h2>
             <div class="form-group" style="float:left; width:48%;">
-                <label>Name</label>
-                <input type="text" class="form-control" placeholder="Enter Your Name" name="name" autocomplete="off" required>
+                <label style="font-size: 20px; ">Name</label>
+                <input type="text"style="font-size: 15px; " class="form-control" placeholder="Enter Your Name" name="name" autocomplete="off" required>
             </div>
             <div class="form-group" style="float:right; width:48%;">
-                <label>Address</label>
-                <input type="text" class="form-control" placeholder="Enter Your address" name="address" autocomplete="off" required>
+                <label style="font-size: 20px;">Address</label>
+                <input type="text" style="font-size:15px; " class="form-control" placeholder="Enter Your address" name="address" autocomplete="off" required>
             </div>
             <div class="form-group" style="float:left; width:48%;">
-                <label>Phone</label>
-                <input type="text"  class="form-control" placeholder="Enter Your Phone Number" name="phone" autocomplete="off" required>
+                <label style="font-size: 20px; ">Phone</label>
+                <input type="text" style="font-size:15px; " class="form-control" placeholder="Enter Your Phone Number" name="phone" autocomplete="off" required>
                 <span id="error"></span>
             </div>
             
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Email</label>
-                <input type="text" class="form-control" placeholder="Enter Your Email" name="email" autocomplete="off" required>
+                <label style="font-size: 20px; ">Email</label>
+                <input type="text" style="font-size:15px; " class="form-control" placeholder="Enter Your Email" name="email" autocomplete="off" required>
                 <span id="errormail"></span>
             </div>
 
-<br>
-<br>
-
+</br>
+</br>
+          
             <h2>Professional Information</h2>
             <div class="form-group" style="float:left; width:48%;">
-                <label >Position</label>
-                <select class="form-control" name="position" required>
-                <option disabled selected>Select Your Position</option>
+                <label style="font-size: 20px; ">Position</label>
+                <select style="font-size:15px; "class="form-control" name="position" required>
+                <option  disabled selected>Select Your Position</option>
                 <option value="Physician">Physician</option> 
                 <option value="Surgeon">Surgeon</option>
                 <option value="Neutritionist">Neutritionist</option>
@@ -148,8 +150,8 @@ if(isset($_POST['submit'])){
 
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Medical_School</label>
-                <select class="form-control"  name="medicalschool"  required>
+                <label style="font-size:20px; ">Medical_School</label>
+                <select style="font-size:15px; " class="form-control"  name="medicalschool"  required>
                 <option disabled selected>Select Your Medi-School</option>
                 <option value="Jayawardanapura University">Jayawardanapura University</option> 
                 <option value="Colombo University">Colombo University</option>
@@ -168,8 +170,8 @@ if(isset($_POST['submit'])){
 
 
             <div class="form-group" style="float:left; width:48%;">
-                <label>Speciality</label>
-                <select class="form-control"  name="speciality"  required>
+                <label style="font-size: 20px; ">Speciality</label>
+                <select style="font-size:15px; " class="form-control"  name="speciality"  required>
                 <option disabled selected>Select Your Speciality</option>
                 <option value="Nephrologist">Nephrologist</option> 
                 <option value="Dermatologist">Dermatologist</option>
@@ -188,8 +190,8 @@ if(isset($_POST['submit'])){
 
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Program Director</label>
-                <select class="form-control"  name="director" autocomplete="off" required>
+                <label style="font-size: 20px; ">Program Director</label>
+                <select style="font-size:15px; " class="form-control"  name="director" autocomplete="off" required>
                 <option disabled selected>Select Your Speciality</option>
                 <option value="Dr.Somiah">Dr.WAS De Silva</option> 
                 <option value="DDr.Sreekanth">Dr.B.G.N.Rathnasena</option>
@@ -206,7 +208,8 @@ if(isset($_POST['submit'])){
             </div>
 
             <!--input type="submit" value="Submit" class="btn btn-primary" style="background-color:#198754"-->
-            <button type="submit" class="btn btn-primary" style="background-color:#198754" name="submit" >Submit</button>
+            <button type="submit"  class="btn btn-primary" style="background-color:#198754" name="submit" >Submit</button>
+
         </form>
         
     

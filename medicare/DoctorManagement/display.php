@@ -46,7 +46,7 @@ include 'connect.php';
 
     <div class="container">
       
-    <br> <h1 style="margin-left:30% ;">View Doctor Details</h1><br><br>
+    <h2 style="text-align:center;"><b> Doctor Details</b></h2><br><br>
 
       <table class="table">
         <thead>

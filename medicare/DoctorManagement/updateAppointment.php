@@ -70,13 +70,13 @@ if(isset($_POST['submit'])){
     </div>
     <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:25px; margin-top:25px" onclick="location.href='viewAppointment.php'" name="back">Back</button><br>
 
-    <h2 class="h2edit"> Edit Appointment Details</h2>
+    <h2 class="h2edit" style="text-align:center;"><b>  Edit Appointment Details</b> </h2>
     <div class="container my-5">
         <form method="POST">
         
         <div class="form-group" style="float:left; width:48%;">
-                <label>Doctor_Name</label>
-                <select class="form-control" placeholder="Enter Patient" name="Dr_Name" autocomplete="off">
+                <label style="font-size: 20px; ">Doctor_Name</label>
+                <select style="font-size:15px; " class="form-control" placeholder="Enter Patient" name="Dr_Name" autocomplete="off">
                  <option><?php echo $Dr_Name?></option>
                  <option value="Dr.Somiah">Dr.Somiah</option> 
                  <option value="DDr.Sreekanth">Dr.Sreekanth</option>
@@ -88,20 +88,20 @@ if(isset($_POST['submit'])){
 
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Appointment_date</label>   
-                <input type="date" class="form-control" placeholder="Enter Appointment date" name="App_date" autocomplete="off" value="<?php echo $App_date?>">
+                <label style="font-size:20px; ">Appointment_date</label>   
+                <input  style="font-size:15px;" type="date" class="form-control" placeholder="Enter Appointment date" name="App_date" autocomplete="off" value="<?php echo $App_date?>">
             </div>
 
 
             <div class="form-group" style="float:left; width:48%;">
-                <label>Appointment_time</label>
-                <input type="time" class="form-control" placeholder="Enter Appointment time" name="App_time" autocomplete="off" value="<?php echo $App_time?>">
+                <label style="font-size:20px; ">Appointment_time</label>
+                <input style="font-size:15px; " type="time" class="form-control" placeholder="Enter Appointment time" name="App_time" autocomplete="off" value="<?php echo $App_time?>">
             </div>
 
           
             <div class="form-group" style="float:left; width:48%;">
-                <label>Status</label>
-                <select class="form-control" placeholder="Select Status" name="status" autocomplete="off">
+                <label style="font-size: 20px; ">Status</label>
+                <select style="font-size:15px; " class="form-control" placeholder="Select Status" name="status" autocomplete="off">
                 <option><?php echo $status ?></option>
                 <option value="Available">Available</option> 
                 <option value="Unavailable">Unavailable</option>
@@ -113,8 +113,8 @@ if(isset($_POST['submit'])){
 
          
             <div class="form-group" style="float:left; width:48%;">
-                <label>Speciality</label>
-                <select  class="form-control" placeholder="Select Your Speciality" name="speciality" autocomplete="off" >
+                <label style="font-size: 20px; ">Speciality</label>
+                <select style="font-size:15px; "  class="form-control" placeholder="Select Your Speciality" name="speciality" autocomplete="off" >
                 <option><?php echo $speciality ?></option>
                 <option value="Nephrologist">Nephrologist</option> 
                 <option value="Dermatologist">Dermatologist</option>
@@ -126,8 +126,8 @@ if(isset($_POST['submit'])){
             
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Patient Name</label>
-                <select class="form-control" placeholder="Enter Patient" name="patient_name" autocomplete="off">
+                <label style="font-size: 20px; ">Patient Name</label>
+                <select style="font-size:15px; " class="form-control" placeholder="Enter Patient" name="patient_name" autocomplete="off">
                 <option><?php echo $patient_name ?></option>
                 <option value="Dr.Somiah">Dr.Somiah</option> 
                 <option value="Dr.Sreekanth">Dr.Sreekanth</option>
@@ -141,7 +141,7 @@ if(isset($_POST['submit'])){
 
 
             <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left: 500px;" name="submit">Update</button>
-            <button type="reset" class="btn btn-primary" style="background-color:#198754" name="reset">Reset</button>
+            <button type="reset" class="btn btn-primary" style="background-color:#198754;margin-left:1%" name="reset">Reset</button>
         </form>
 
     </div>

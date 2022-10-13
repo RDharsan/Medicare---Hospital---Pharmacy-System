@@ -42,6 +42,52 @@ if(isset($_POST['submit'])){
 <html lang="en">
 
 <head>
+
+<script type="text/javascript">
+    function validate(){
+    var phone = document.forms["myform"]["phone"].value;
+    if(isNaN(phone)){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Only digits allowed for Phone number</span>"
+        return false;
+    }
+
+    else if(phone.length>10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(phone.length<10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(phone.charAt(0)==9){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Starting number 9 not allowed</span>"
+        return false;
+    }
+
+
+
+    var email = document.forms["myform"]["email"].value;
+    
+    var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+    var x=re.test(email);
+    if(x){
+        
+    }
+    else{
+        document.getElementById("errormail").innerHTML="<span style='color: red;'>"+"Mail id is not in correct format</span>"
+        return false;
+    }
+
+
+  }
+
+</script>
+
+
+
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -74,34 +120,37 @@ if(isset($_POST['submit'])){
     </div>
     <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:25px; margin-top:25px" onclick="location.href='display.php'" name="back">Back</button><br>
 
-    <h2 class="h2edit"> Edit Doctor Details</h2>
+    <h2 class="h2edit" style="text-align:center;"><b> Edit Doctor Details</b> </h2>
     <div class="container my-5">
-        <form method="POST">
+        <form name="myform" onsubmit="return validate()" method="POST">
+        
         <h2>Personal Information</h2>
         <div class="form-group" style="float:left; width:48%;">
-                <label>Name</label>
-                <input type="text" class="form-control" placeholder="Enter Your Name" name="name" autocomplete="off" value="<?php echo $name?>">
+                <label style="font-size: 20px; ">Name</label>
+                <input style="font-size:15px; " type="text" class="form-control" placeholder="Enter Your Name" name="name" autocomplete="off" value="<?php echo $name?>">
             </div>
             <div class="form-group" style="float:right; width:48%;">
-                <label>Address</label>
-                <input type="text" class="form-control" placeholder="Enter Your address" name="address" autocomplete="off" value="<?php echo $address?>">
+                <label style="font-size: 20px; ">Address</label>
+                <input style="font-size:15px; " type="text" class="form-control" placeholder="Enter Your address" name="address" autocomplete="off" value="<?php echo $address?>">
             </div>
             <div class="form-group" style="float:left; width:48%;">
-                <label>Phone</label>
-                <input type="text" class="form-control" placeholder="Enter Your Phone Number" name="phone" autocomplete="off" value="<?php echo $phone?>">
+                <label style="font-size: 20px; ">Phone</label>
+                <input style="font-size:15px; " type="text" class="form-control" placeholder="Enter Your Phone Number" name="phone" autocomplete="off" value="<?php echo $phone?>">
+                <span id="error"></span>
             </div>
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Email</label>
-                <input type="text" class="form-control" placeholder="Enter Your Email" name="email" autocomplete="off" value="<?php echo $email?>">
+                <label style="font-size: 20px; ">Email</label>
+                <input style="font-size:15px; " type="text" class="form-control" placeholder="Enter Your Email" name="email" autocomplete="off" value="<?php echo $email?>">
+                <span id="errormail"></span>
             </div>
 
 <br>
 <br>
             <h2>Professional Information</h2>
             <div class="form-group" style="float:left; width:48%;">
-                <label>Position</label>
-                <select class="form-control" placeholder="Select Your Position" name="position" autocomplete="off">
+                <label style="font-size: 20px; ">Position</label>
+                <select style="font-size:15px; " class="form-control" placeholder="Select Your Position" name="position" autocomplete="off">
                 <option><?php echo $position ?></option>
                 <option value="Physician">Physician</option> 
                 <option value="Surgeon">Surgeon</option>
@@ -113,8 +162,8 @@ if(isset($_POST['submit'])){
             </div>
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Medical_School</label>
-                <select class="form-control" placeholder="Select Your Medi-School" name="medicalschool" autocomplete="off">
+                <label style="font-size: 20px; ">Medical_School</label>
+                <select style="font-size:15px; " class="form-control" placeholder="Select Your Medi-School" name="medicalschool" autocomplete="off">
                 <option><?php echo $medicalschool ?></option>
                 <option value="Jayawardanapura University">Jayawardanapura University</option> 
                 <option value="Colombo University">Colombo University</option>
@@ -126,8 +175,8 @@ if(isset($_POST['submit'])){
 
 
             <div class="form-group" style="float:left; width:48%;">
-                <label>Speciality</label>
-                <select  class="form-control" placeholder="Select Your Speciality" name="speciality" autocomplete="off" >
+                <label style="font-size: 20px; ">Speciality</label>
+                <select style="font-size:15px; " class="form-control" placeholder="Select Your Speciality" name="speciality" autocomplete="off" >
                 <option><?php echo $speciality ?></option>
                 <option value="Nephrologist">Nephrologist</option> 
                 <option value="Dermatologist">Dermatologist</option>
@@ -138,8 +187,8 @@ if(isset($_POST['submit'])){
             </div>
 
             <div class="form-group" style="float:right; width:48%;">
-                <label>Program Director</label>
-                <select class="form-control" placeholder="Select Your Director" name="director" autocomplete="off">
+                <label style="font-size: 20px; ">Program Director</label>
+                <select style="font-size: 15px; " class="form-control" placeholder="Select Your Director" name="director" autocomplete="off">
                 <option><?php echo $director ?></option>
                 <option value="Dr.Somiah">Dr.Somiah</option> 
                 <option value="Dr.Sreekanth">Dr.Sreekanth</option>
@@ -153,7 +202,7 @@ if(isset($_POST['submit'])){
 
 
             <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left: 500px;" name="submit">Update</button>
-            <button type="reset" class="btn btn-primary" style="background-color:#198754" name="reset">Reset</button>
+            <button type="reset" class="btn btn-primary" style="background-color:#198754;margin-left:1%"" name="reset">Reset</button>
         </form>
 
     </div>

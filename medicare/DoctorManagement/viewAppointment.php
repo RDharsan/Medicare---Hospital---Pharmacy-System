@@ -45,9 +45,9 @@ include 'connect.php';
 
 
     <div class="container">
-    <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:25px; margin-top:-25px" onclick="location.href='addAppointment.php'" name="addequip">Add Appointment Details</button><br>  
+    <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:1px; margin-top:-5px; font-size:20px;" onclick="location.href='addAppointment.php'" name="addequip">Add Appointment Details</button><br>  
     
-    <br> <h1 style="margin-left:25% ;">View Appointment Details</h1><br><br>
+    <br> <b><h2 style="text-align:center;">View Appointment Details</b></h2><br><br>
  
       <table class="table">
         <thead>

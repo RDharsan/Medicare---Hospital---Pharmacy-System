@@ -48,15 +48,14 @@ include 'connect.php';
         <form action="" method="POST">
             <div class="form-group" style="margin-left:37%">
             <!-- <input class="form-control-lg" type="text" placeholder="Search Test type" name="search"> -->
+            <h3><b>SEARCH APPOINTMENT DETAILS</b></h3>
+            <br>
+            <br>
             <div class="col-md-5">
-                    
-                    <input type="text" class="form-control" placeholder="Enter Doctor name" name="search"> 
-       
-                        
-                    
+                       <input type="text" class="form-control" style="margin-left:-10%;  width:400px; font-size: 25px; "  placeholder="Enter Doctor name" name="search">   
                     <br>
                
-            <button class="btn btn-primary btn-lg" style="background-color:#198754;margin-left:30%" name="submit" >Search</button>
+            <button class="btn btn-primary btn-lg" style="background-color:#198754;  margin-top: -130px; margin-left:150%;" name="submit" >Search </button>
             </div>
         </div>
         </form>
@@ -70,7 +69,7 @@ include 'connect.php';
     <h1 style="text-align: center;"><?php  
         if(isset($_POST['submit'])){
         $search=$_POST['search'];
-        echo $search;
+      
         }
         
     ?></h1><br>
