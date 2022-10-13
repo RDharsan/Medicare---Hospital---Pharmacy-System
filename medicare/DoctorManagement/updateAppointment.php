@@ -127,14 +127,7 @@ if(isset($_POST['submit'])){
 
             <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Patient Name</label>
-                <select style="font-size:15px; " class="form-control" placeholder="Enter Patient" name="patient_name" autocomplete="off">
-                <option><?php echo $patient_name ?></option>
-                <option value="Dr.Somiah">Dr.Somiah</option> 
-                <option value="Dr.Sreekanth">Dr.Sreekanth</option>
-                <option value="Dr.Bandara">Dr.Bandara</option>
-                <option value="Dr.Sanjana">Dr.Sanjana</option>
-                <option value="Dr.Vasuki">Dr.Vasuki</option>  
-                </select>
+                <input style="font-size: 15px;" type="text" class="form-control" placeholder="Enter Patient name" name="patient_name" autocomplete="off">
             </div>
 
 
