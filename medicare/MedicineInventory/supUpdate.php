@@ -5,15 +5,15 @@ $sql="Select * from `supplier` where sid=$sid";
 $result=mysqli_query($con,$sql);
 $row=mysqli_fetch_assoc($result);
 $supplierName=$row['supplierName'];
-$country=$row['country'];
+$address=$row['address'];
 $phoneNo=$row['phoneNo'];
 
 if(isset($_POST['submit'])){
     $sname=$_POST['sname'];
-    $country=$_POST['country'];
-    $phoneNo=$_POST['code']." ".$_POST['no'];
+    $address=$_POST['address'];
+    $phoneNo=$_POST['phoneNo'];
 
-    $sql="update `supplier` set sid=$sid,supplierName='$sname',country='$country',phoneNo='$phoneNo' where sid=$sid" ;
+    $sql="update `supplier` set sid=$sid,supplierName='$sname',address='$address',phoneNo='$phoneNo' where sid=$sid" ;
     
     $result=mysqli_query($con,$sql);
     if($result){
@@ -53,8 +53,8 @@ if(isset($_POST['submit'])){
             width: 100px;
         }
         .bn{
-            margin-top: 70px;
-            margin-left: 40%;
+            margin-top: 30px;
+            margin-left: 25%;
         }
         h3{
             text-align: center;
@@ -129,8 +129,8 @@ if(isset($_POST['submit'])){
         </div>
 
         <div class="form-group">
-            <label >Country Name:</label>
-            <input type="text" value=<?php echo $country;?> class="form-control" placeholder="Type Country Name" name="country"/>
+            <label >Address:</label>
+            <input type="text" value=<?php echo $address;?> class="form-control" placeholder="Type Address" name="address"/>
         </div>
 
         
@@ -139,23 +139,15 @@ if(isset($_POST['submit'])){
         <div class="form-group">
         <label>Phone No:</label>
             <div class="in-row">
-                <select  class="form-control sside" name="code" >
-                <option value="" disabled selected><?php echo $phoneNo;?></option>
-                <option value="" data-dialcode="">Please select</option>
-                <option value="+43" data-dialcode="+43">Austria</option>
-                <option value="+263" data-dialcode="+263">Zimbabwe</option>
-                </select>
-                <input type="text" class="form-control " value=<?php echo $phoneNo;?> placeholder="   X X X   X X X X   X X X " name="no">
+                <input type="text" class="form-control " value=<?php echo $phoneNo;?> placeholder="   X X X   X X X X   X X X " name="phoneNo">
             </div>
         </div>
 
         
     
     </div>
-   
-
     <div class="bn">
-        <button name="submit" type="submit" style="background-color:#198754" class="btn button2">Submit</button><button type="reset" class="btn button3" style="background-color:#198754" name="reset">Reset</button>
+        <button name="submit" type="submit" style="background-color:#198754; color:white" class="btn button2">Submit</button><button type="reset" class="btn button3" style="background-color:#198754; color:white" name="reset">Reset</button>
     </div>
     
     </form> 

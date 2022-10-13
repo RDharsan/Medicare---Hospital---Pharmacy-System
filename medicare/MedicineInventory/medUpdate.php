@@ -26,8 +26,7 @@ if(isset($_POST['submit'])){
     $damount=$_POST['damount'];
     $units=$_POST['units'];
 
-    $sql="update `medicine` set mid=$mid,medicineType='$type',medicineName='$name',manufactureDate='$mdate',expireDate='$edate',supplierName='$sname',quantityAmount='$qamount',package='$package',dosageAmount='$damount',units='$units' where mid=$mid" ;
-    
+    $sql="update `medicine` set mid=$mid, medicineType='$type', medicineName='$name', manufactureDate='$mdate', expireDate='$edate', supplierName='$sname', quantityAmount='$qamount', package='$package', dosageAmount='$damount', units='$units' where mid=$mid" ;
     $result=mysqli_query($con,$sql);
     if($result){
         header('location: viewMedicine.php');
@@ -299,7 +298,7 @@ if(isset($_POST['submit'])){
     </div>
 
     <div class="bn">
-        <button name="submit" type="submit" class="btn button2" style="background-color:#198754">Update</button><button type="reset" class="btn button3" style="background-color:#198754" name="reset">Reset</button>
+        <button name="submit" type="submit" class="btn button2" style="background-color:#198754; color:white">Update</button><button type="reset" class="btn button3" style="background-color:#198754; color:white" name="reset">Reset</button>
     </div>
     
     </form> 

@@ -108,7 +108,7 @@ if(isset($_POST['submit'])){
     <div class="col" >
         <div class="form-group">
         <label>Medicine Type:</label>
-        <select  class="form-control" name="type" required>
+        <select  class="form-control" name="type" autocomplete="off" required>
             <option value="" disabled selected>Select Medicine Type</option>
             <option value="Liquid">Liquid</option>
             <option value="Tablet">Tablet</option>
@@ -121,17 +121,17 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
             <label >Medicine Name:</label>
-            <input type="text" class="form-control" placeholder="Type Medicine Name" name="name"required/>
+            <input type="text" class="form-control" placeholder="Type Medicine Name" name="name" autocomplete="off" required/>
         </div>
 
         <div class="form-group">
             <label >Manufacture Date:</label>
-            <input type="date" class="form-control" placeholder="Select Manufacture Date" name="mdate" required>
+            <input type="date" class="form-control" placeholder="Select Manufacture Date" name="mdate" autocomplete="off" required>
         </div>
 
         <div class="form-group">
             <label >Expire Date:</label>
-            <input type="date" class="form-control" placeholder="Select Expire Date" name="edate" required>
+            <input type="date" class="form-control" placeholder="Select Expire Date" name="edate" autocomplete="off" required>
         </div>
     </div>
     
@@ -142,13 +142,13 @@ if(isset($_POST['submit'])){
     <div class="col">
         <div class="form-group">
             <label >Supplier Name:</label>
-            <input type="text" class="form-control" placeholder="Type Supplier Name" name="sname" required>
+            <input type="text" class="form-control" placeholder="Type Supplier Name" name="sname" autocomplete="off" required>
         </div>
 
         <div class="form-group">
         <label>Quantity:</label>
             <div class="in-row">
-                <input type="text" class="form-control side " placeholder="Amount" name="qamount" required>
+                <input type="text" class="form-control side " placeholder="Amount" name="qamount" autocomplete="off" required>
                 <select  class="form-control sside" name="package" required >
                     <option value="" disabled selected>Package type</option>
                     <option value="Vials">Vials</option>
@@ -164,7 +164,7 @@ if(isset($_POST['submit'])){
         <div class="form-group">
             <label>Dosage:</label>
             <div class="in-row">
-                <input type="text" class="form-control side" placeholder="Amount" name="damount" required>
+                <input type="text" class="form-control side" placeholder="Amount" name="damount" autocomplete="off" required>
                 <select  class="form-control sside" name="units" required >
                     <option value="" disabled selected>Units</option>
                     <option value="l">l</option>

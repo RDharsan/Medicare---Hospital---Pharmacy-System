@@ -5,10 +5,6 @@ if(isset($_POST['submit'])){
     $address=$_POST['address'];
     $code=$_POST['code'];
 
-    $no=$_POST['no'];
- 
-    $phoneNo=$_POST['code']." ".$_POST['no'];
-
     $sql="insert into `supplier`(supplierName,address,phoneNo)
     values('$sname','$address','$phoneNo')";
 
@@ -30,8 +26,6 @@ if(isset($_POST['submit'])){
 <!doctype html>
 <html lang="en">
   <head>
-
-  
   <style>
         .container{
             max-width: 500px!important;
@@ -103,39 +97,33 @@ if(isset($_POST['submit'])){
     </div>
 
 
-  <h3><b>ADD MEDICINE DETAILS</b></h3>
+  <h3><b>ADD SUPLIER DETAILS</b></h3>
   
     <div class="container">
     
 
-    <form method="post">
+    <form method="post" name="form" onsubmit="return validate()">
     
     <div class="col side" >
         
         <div class="form-group">
             <label >Supplier Name:</label>
-            <input type="text" class="form-control" placeholder="Type Supplier Name" name="sname"/>
+            <input type="text" class="form-control" placeholder="Type Supplier Name" name="sname" autocomplete="off" required/>
         </div>
 
         <div class="form-group">
             <label >Address:</label>
-            <input type="text" class="form-control" placeholder="Type Address" name="address"/>
+            <input type="text" class="form-control" placeholder="Type Address" name="address" autocomplete="off" required/>
         </div>
 
         
-   
-
         <div class="form-group">
         <label>Phone No:</label>
-        <input type="text" class="form-control " placeholder="   X X X   X X X X   X X X " name="no">
+        <input type="text" class="form-control " placeholder="__ __ __ __ __ __ __ __ __ __" name="no" autocomplete="off" required>
         
         </div>
 
-        
-    
     </div>
-   
-
     <div class="bn">
         <button name="submit" type="submit" style="background-color:#198754" class="btn button2">Submit</button><button type="reset" class="btn button3" style="background-color:#198754" name="reset">Reset</button>
     </div>
