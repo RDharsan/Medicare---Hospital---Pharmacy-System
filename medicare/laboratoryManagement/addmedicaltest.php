@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
 
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
+    <script type="text/javascript" src="index.js"></script>
 
 
 

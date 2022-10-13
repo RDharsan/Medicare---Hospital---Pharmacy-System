@@ -50,8 +50,8 @@ include '../connection/connect.php';
             background-color: #198754!important;
         }
         .tbl{
-             width: 670px!important;
-             margin-left: 200px!important;
+             width: 970px!important;
+             margin-left: 100px!important;
         }
         .bbb{
             /* border-color: #04AA6D!important; */
@@ -93,7 +93,7 @@ include '../connection/connect.php';
 
     <table class="table tbl">
   <thead>
-    <tr>
+    <tr style="background-color:#198754;color:white;">
         <th scope="col">SID</th>
         <th scope="col">Supplier Name</th>
         <th scope="col">Address</th>

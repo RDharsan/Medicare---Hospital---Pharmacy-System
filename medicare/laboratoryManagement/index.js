@@ -205,6 +205,8 @@ function validatemedical() {
     }
 }
 
+
+
 function datepick(){
     var date = new Date();
     var tdate = date.getDate();
