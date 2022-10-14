@@ -26,6 +26,32 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
+<script type="text/javascript">
+    function validate(){
+    var t_phone = document.forms["myform"]["t_phone"].value;
+    if(isNaN(t_phone)){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Only digits allowed for Phone number</span>"
+        return false;
+    }
+
+    else if(t_phone.length>10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(t_phone.length<10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(t_phone.charAt(0)==9){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Starting number 9 not allowed</span>"
+        return false;
+    }
+
+} 
+
+</script> 
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,17 +83,17 @@ if (isset($_POST['submit'])) {
 
     </div>
     <div class="container my-5">
-        <form method="POST" id="patient_form">
+        <form name="myform" onsubmit="return validate()" method="POST">
         <h1 style="margin-left:35% ;">Add Patient Details</h1>
             <div class="row" style="margin-left:10%">
                 <div class="col-md-5">
 
                     <br><label>Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Your Firstname" name="name"  required>
+                    <input type="text" class="form-control" placeholder="Enter Your Firstname" name="name"  required autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>NIC</label>
-                    <input type="text" class="form-control" placeholder="Use capital V" name="nic"  required>
+                    <input type="text" class="form-control" placeholder="Use capital V" name="nic"  required autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>Gender</label>
@@ -79,19 +105,19 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-md-5">
                 <br><label>Date of Birth</label>
-                    <input type="date" class="form-control" placeholder="Mr/Mrs/Miss.Enter Patient's Name" name="dob"  required>
+                    <input type="date" class="form-control" placeholder="Mr/Mrs/Miss.Enter Patient's Name" name="dob"  required autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>Address</label>
-                    <input type="text" class="form-control" placeholder="Enter Patient's Address" name="address"  required>
+                    <input type="text" class="form-control" placeholder="Enter Patient's Address" name="address"  required autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>City</label>
-                    <input type="text" class="form-control" placeholder="Enter Patient's City" name="city"  required>
+                    <input type="text" class="form-control" placeholder="Enter Patient's City" name="city"  required autocomplete="off" required>
                 </div>
                 <div class="col-md-5">
                 <br><label>Phone Number</label>
-                    <input type="number" class="form-control" placeholder="Ex:0724705102" name="t_phone"  required>
+                    <input type="number" class="form-control" placeholder="Ex:0724705102" name="t_phone"  required autocomplete="off" required>
                 </div>
             </div>
                 <br>

@@ -26,9 +26,9 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     function validate(){
-    var phone = document.forms["myform"]["telephone"].value;
+    var telephone = document.forms["myform"]["telephone"].value;
     if(isNaN(telephone)){
         document.getElementById("error").innerHTML="<span style='color: red;'>"+"Only digits allowed for Phone number</span>"
         return false;
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 
 } 
 
-</script>  -->
+</script> 
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -91,7 +91,26 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
 
                     <br><label>Patient ID</label>
-                    <input type="text" class="form-control" placeholder="Enter Patient ID" name="pid" autocomplete="off" required>
+                                            <?php
+
+
+                        $sql2 = "select pid from `patient`";
+                        $result2 = mysqli_query($con, $sql2);
+                        ?>
+                    <!-- <input type="text" class="form-control" placeholder="Enter Patient ID" name="pid" autocomplete="off" required> -->
+                    <select name="pid" id="pid" class="form-control" >
+                        <option disabled selected>Choose Patient ID</option>
+                        <?php
+                        while ($row1 = mysqli_fetch_array($result2)) {
+
+                        ?>
+
+                            <option><?php echo $row1['pid']; ?></option>
+
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="col-md-5">
                 <br><label>Patient Telephone number</label>
@@ -121,19 +140,24 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-md-5">
                 <br><label>Consulting Doctor</label>
+                <?php
+
+
+                $sql1 = "select name from `doctor`";
+                $result1 = mysqli_query($con, $sql1);
+                ?>
                 <select class="form-control"  name="consulting_doc" autocomplete="off" required>
-                <option disabled selected>Select Consulting Doctor</option>
-                <option value="Dr.Somiah">Dr.W.A.S De Silva</option> 
-                <option value="Dr.Sreekanth">Dr.B.G.N.Rathnasena</option>
-                <option value="Dr.Bandara">Dr.P.N.Rajapakshe</option>
-                <option value="Dr.Sanjana">Dr.Sanjana</option>
-                <option value="Dr.Vasuki">Dr.Vasuki</option>  
-                <option value="Dr.Bandara"> Prof. Anoja Abeyjeewa.</option>
-                <option value="Dr.Sanjana">Dr.H.K.De S.Kularatne</option>
-                <option value="Dr.Vasuki"> Dr.S.D.Rajamanthri</option>
-                <option value="Dr.Sanjana">Dr.B.D.A.Perera</option>
-                <option value="Dr.Vasuki">Prof.Nirmala </option>
-                <option value="Others">Others</option>  
+                <option disabled selected>Choose doctor</option>
+                        <?php
+                        while ($row1 = mysqli_fetch_array($result1)) {
+
+                        ?>
+
+                            <option><?php echo $row1['name']; ?></option>
+
+                        <?php
+                        }
+                        ?>
                 </select>
             
                 </div>
