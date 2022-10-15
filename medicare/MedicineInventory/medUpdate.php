@@ -46,12 +46,6 @@ if(isset($_POST['submit'])){
             height: 350px;
             margin-top: 30px;
         }
-        /* .side{
-            width: 300px!important;          
-        }
-        .sside{
-            width: 300px!important;
-        } */
         .button2 {
             background-color: #198754;
             width: 100px;

@@ -3,7 +3,7 @@ include '../connection/connect.php';
 if(isset($_POST['submit'])){
     $sname=$_POST['sname'];
     $address=$_POST['address'];
-    $code=$_POST['code'];
+    $phoneNo=$_POST['phoneNo'];
 
     $sql="insert into `supplier`(supplierName,address,phoneNo)
     values('$sname','$address','$phoneNo')";
@@ -26,6 +26,7 @@ if(isset($_POST['submit'])){
 <!doctype html>
 <html lang="en">
   <head>
+  <script type="text/javascript" src="validations.js"></script>
   <style>
         .container{
             max-width: 500px!important;
@@ -102,7 +103,7 @@ if(isset($_POST['submit'])){
     <div class="container">
     
 
-    <form method="post" name="form" onsubmit="return validate()">
+    <form method="POST" name="form" onsubmit="return validate()">
     
     <div class="col side" >
         
@@ -119,7 +120,7 @@ if(isset($_POST['submit'])){
         
         <div class="form-group">
         <label>Phone No:</label>
-        <input type="text" class="form-control " placeholder="__ __ __ __ __ __ __ __ __ __" name="no" autocomplete="off" required>
+        <input type="text" class="form-control " placeholder="__ __ __ __ __ __ __ __ __ __" name="phoneNo" autocomplete="off" required>
         
         </div>
 

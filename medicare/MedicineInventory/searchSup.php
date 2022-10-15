@@ -108,7 +108,7 @@ include '../connection/connect.php';
         <form action="" method="POST">
             <div class="form-group" style="margin-left:37%">
             <div class="col-md-5">
-                <input type="text" class="form-control i" placeholder="Enter Supplier Name" name="search"> 
+                <input type="text" class="form-control i" placeholder="Search" name="search"> 
                 <button class="btn n" style="background-color:#198754" name="submit" >Search</button>
             </div>
         </div>

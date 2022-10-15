@@ -119,7 +119,7 @@ if($result){
       <td>'.$phoneNo.'</td>
       <td>
       <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button>
-      <button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" class="text-light">Delete</a></button>
+      <button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" onclick="return myFunction()" class="text-light">Delete</a></button>
   </td>
     </tr>';
   }

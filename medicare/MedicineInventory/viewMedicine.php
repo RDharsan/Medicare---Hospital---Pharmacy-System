@@ -140,7 +140,7 @@ include '../connection/connect.php';
         <td>'.$units.'</td>
         <td>
         <button class="btn bb" style="background-color:#198754"><a href="medUpdate.php?updateid='.$mid.'" class="text-light">Update</a></button>
-        <button class="btn bbb" style="background-color:#198754;"><a href="medDelete.php?deleteid='.$mid.'" class="text-light">Delete</a></button>
+        <button class="btn bbb" style="background-color:#198754;"><a href="medDelete.php?deleteid='.$mid.'" onclick="return myFunction()" class="text-light">Delete</a></button>
     </td>
       </tr>';
     }
