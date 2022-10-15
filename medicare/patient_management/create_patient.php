@@ -118,6 +118,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                 <br><label>Phone Number</label>
                     <input type="number" class="form-control" placeholder="Ex:0724705102" name="t_phone"  required autocomplete="off" required>
+                    <span id="error"></span>
                 </div>
             </div>
                 <br>
