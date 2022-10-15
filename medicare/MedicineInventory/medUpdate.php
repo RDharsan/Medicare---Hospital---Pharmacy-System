@@ -35,7 +35,6 @@ if(isset($_POST['submit'])){
     }
 
 }
-
 ?>
 
 <!doctype html>
@@ -82,11 +81,6 @@ if(isset($_POST['submit'])){
         .in-row{
             display: flex;
         }
-        /* .in-col{
-            flex: 20%;
-            padding: 20px;
-            height: 300px;
-        } */
         .a{
             margin-left: 20px !important;
             margin-top: 20px !important;
@@ -182,17 +176,17 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
             <label >Medicine Name:</label>
-            <input type="text" value=<?php echo $medicineName;?> class="form-control" placeholder="Type Medicine Name" name="name" required/>
+            <input type="text" value=<?php echo $medicineName;?> class="form-control" placeholder="Type Medicine Name" autocomplete="off" name="name" required/>
         </div>
 
         <div class="form-group">
             <label >Manufacture Date:</label>
-            <input type="date" value=<?php echo $manufactureDate;?> class="form-control" placeholder="Select Manufacture Date" name="mdate" required>
+            <input type="date" value=<?php echo $manufactureDate;?> class="form-control" placeholder="Select Manufacture Date" autocomplete="off" name="mdate" required>
         </div>
 
         <div class="form-group">
             <label >Expire Date:</label>
-            <input type="date" value=<?php echo $expireDate;?> class="form-control" placeholder="Select Expire Date" name="edate" required>
+            <input type="date" value=<?php echo $expireDate;?> class="form-control" placeholder="Select Expire Date" name="edate" autocomplete="off" required>
         </div>
     </div>
     
@@ -203,13 +197,13 @@ if(isset($_POST['submit'])){
     <div class="col">
         <div class="form-group">
             <label >Supplier Name:</label>
-            <input type="text" class="form-control" value=<?php echo $supplierName;?> placeholder="Type Supplier Name" name="sname" required>
+            <input type="text" class="form-control" value=<?php echo $supplierName;?> placeholder="Type Supplier Name" name="sname" autocomplete="off" required>
         </div>
 
         <div class="form-group">
         <label>Quantity:</label>
             <div class="in-row">
-                <input type="text" class="form-control side " placeholder="Amount" value=<?php echo $quantityAmount;?> name="qamount" required>
+                <input type="text" class="form-control side " placeholder="Amount" value=<?php echo $quantityAmount;?> name="qamount" autocomplete="off" required>
                 <select class="form-control sside" name="package" required>
                     <option value="" disabled selected >Package</option>
                     <option value="Vials"
@@ -261,7 +255,7 @@ if(isset($_POST['submit'])){
         <div class="form-group">
             <label>Dosage:</label>
             <div class="in-row">
-                <input type="text" class="form-control side" placeholder="Amount"  value=<?php echo $dosageAmount;?> name="damount" required>
+                <input type="text" class="form-control side" placeholder="Amount" autocomplete="off" value=<?php echo $dosageAmount;?> name="damount" required>
                 <select  class="form-control sside" name="units" required>
                     <option value="" disabled selected>Units</option>
                     <option value="l" 

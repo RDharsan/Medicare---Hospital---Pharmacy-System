@@ -21,7 +21,6 @@ if(isset($_POST['submit'])){
     }else{
         die(mysqli_error($con));
     }
-
 }
 
 ?>
