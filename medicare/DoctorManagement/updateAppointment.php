@@ -23,8 +23,9 @@ if(isset($_POST['submit'])){
     $sql="update `appointment` set id=$id, Dr_Name='$Dr_Name', App_date='$App_date', App_time='$App_time',status='$status', speciality='$speciality',patient_name='$patient_name' where id=$id";
     $result=mysqli_query($con, $sql);
     if($result){
-        
         header('location: viewAppointment.php');
+      
+    
     }else{
         die(mysqli_error($con));
     }
@@ -137,7 +138,7 @@ if(isset($_POST['submit'])){
             <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Patient Name</label>
                 <input style="font-size: 15px;" type="text" class="form-control" placeholder="Enter Patient name" name="patient_name" autocomplete="off" value="<?php echo $patient_name?>">
-                <span id="errorpname"></span>
+              
             </div>
 
 

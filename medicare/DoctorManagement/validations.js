@@ -1,18 +1,3 @@
-/*var equipment = document.forms["myform"]["equipment"].value;
-if (equipment == "") {
-    alert("please enter valid equipment name!!");
-    document.getElementById("errorEq").innerHTML="<span style='color: red;'>"+"*Please enter valid equipment name!!</span>"
-    return false;
-} else {
-    var ename = /^[a-zA-Z]*$/;
-    if (!ename.test(equipment)) {
-        alert('Equipment name cannot be a number!!!');
-        return false;
-    }
-}
-*/
-
-
 
     function validate(){
     var phone = document.forms["myform"]["phone"].value;
@@ -52,7 +37,7 @@ if (equipment == "") {
 
 
     var name = document.forms["myform"]["name"].value;
-    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var regName = /^[a-zA-Z]*$/;
     var dname = regName.test(name);
     if(dname){
        
@@ -65,16 +50,15 @@ if (equipment == "") {
 
 function validateApp(){
     var patient_name = document.forms["myform"]["patient_name"].value;
-    var reName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    var pname = reName.test(patient_name);
-    if(pname){
+    var rName = /^[a-zA-Z]*$/;
+    var dname = rName.test(patient_name);
+    if(dname){
        
     }else{
-        document.getElementById("errorpname").innerHTML="<span style='color: red;'><b>"+"Patient name cannot contain number!!!</b></span>"
+        document.getElementById("errorpname").innerHTML="<span style='color: red;'><b>"+"Doctor name cannot contain number!!!</b></span>"
         return false;
-    }
+    } 
 }
-
 
 function myFunction() {
 var r = confirm("Are you sure you want to delete?");
@@ -83,5 +67,4 @@ if (r == false) {
 } 
 
 }
-
 

@@ -3,7 +3,7 @@ include 'connect.php';
 $App_date=$dr='';
 if(isset($_POST['submit'])){
     $Dr_Name=$_POST['Dr_Name'];
-    $_POST['App_date'];
+    $App_date=$_POST['App_date'];
     $App_time=$_POST['App_time'];
     $status=$_POST['status'];
     $speciality=$_POST['speciality'];
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
             <div class="form-group" style="float:left; width:48%;">
                 <label style="font-size: 20px; ">Doctor_Name</label>
                 <select style="font-size:15px; " class="form-control" placeholder="Enter Patient" name="Dr_Name" autocomplete="off" required> 
-                <option required disabled selected>Select Doctor Name</option>
+                <option disabled selected>Select Doctor Name</option>
                 <option value="Dr.Somiah">Dr.Somiah</option> 
                 <option value="DDr.Sreekanth">Dr.Sreekanth</option>
                 <option value="Dr.Bandara">Dr.Bandara</option>
@@ -83,19 +83,21 @@ if(isset($_POST['submit'])){
             
             <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Appointment_date</label>
-                <input type="date" style="font-size:15px; " class="form-control" placeholder="Enter Appointment date" name="App_date" value="<?php echo $App_date; ?> " autocomplete="off" required>
+                <input type="date" style="font-size:15px; " class="form-control" placeholder="Enter Appointment date" name="App_date" autocomplete="off" required>
               
             </div>
 
 
             <div class="form-group" style="float:left; width:48%;">
                 <label style="font-size: 20px; ">Appointment_time</label>
-                <input type="time" style="font-size:15px; " class="form-control" placeholder="Enter Appointment time" name="App_time" autocomplete="off" required>
+                <input type="time" style="font-size:15px;"  class="form-control" placeholder="Enter Appointment time" name="App_time" autocomplete="off" required>
+                
             </div>
 
             <div class="form-group" style="float:right; width:48%;">
                 <label style="font-size: 20px; ">Status</label>
                 <select style="font-size:15px; " class="form-control" placeholder="Select Status" name="status" autocomplete="off" required>    
+                <option disabled selected>Select Doctor Status</option>
                 <option value="Available">Available</option> 
                 <option value="Unavailable">Unavailable</option>
                 <option value="Unknown">Unknown</option>
@@ -108,7 +110,7 @@ if(isset($_POST['submit'])){
             <div class="form-group" style="float:left; width:48%;">
                 <label style="font-size: 20px; ">Speciality</label>
                 <select style="font-size:15px; " class="form-control"  name="speciality" autocomplete="off" required>
-                <option required disabled selected>Select Doctor Speciality</option>
+                <option disabled selected>Select Doctor Speciality</option>
                 <option value="Nephrologist">Nephrologist</option> 
                 <option value="Dermatologist">Dermatologist</option>
                 <option value="Cardiologist">Cardiologist</option>
