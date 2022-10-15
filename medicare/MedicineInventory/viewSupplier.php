@@ -66,7 +66,10 @@ include '../connection/connect.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
+    <script type="text/javascript" src="validations.js"></script>
+  
     <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
 </head>
 <body>
 
@@ -119,7 +122,7 @@ if($result){
       <td>'.$phoneNo.'</td>
       <td>
       <button class="btn bb" style="background-color:#198754"><a href="supUpdate.php?updateid='.$sid.'" class="text-light">Update</a></button>
-      <button class="btn bbb" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'" onclick="return myFunction()" class="text-light">Delete</a></button>
+      <button class="btn bbb" onclick="return myFunction()"" style="background-color:#198754;"><a href="supDelete.php?deleteid='.$sid.'"  class="text-light">Delete</a></button>
   </td>
     </tr>';
   }

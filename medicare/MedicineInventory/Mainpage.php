@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="secondNav.css">
 
   <title>Medicare</title>
+  
+  <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
 </head>
 
 <body>

@@ -90,7 +90,9 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
 
-    <title>Update Medicine Details</title>
+
+    <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
   </head>
   <body>
     <!-- header -->

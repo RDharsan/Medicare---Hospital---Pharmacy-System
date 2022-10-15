@@ -48,11 +48,18 @@
     // }
     
     function myFunction() {
-    var r = confirm("Are you sure you want to delete?");
-    if (r == false) {
-       return false;
-    } 
+        var r = confirm("Are you sure you want to delete?");
+        if (r == false) {
+           return false;
+        } else{
+            return true;
+        }
     
+    }
+
+    function msgdlt() {
+
+        alert("Details Deleted sucessfully!!");
     }
     
     

@@ -76,7 +76,9 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
 
-    <title> Add Supplier Details</title>
+ 
+    <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
   </head>
   <body>
     <!-- header -->
@@ -120,7 +122,8 @@ if(isset($_POST['submit'])){
         
         <div class="form-group">
         <label>Phone No:</label>
-        <input type="text" class="form-control " placeholder="__ __ __ __ __ __ __ __ __ __" name="phoneNo" autocomplete="off" required>
+        <input type="text" class="form-control " placeholder="__ __ __ __ __ __ __ __ __ __" name="phoneNo" autocomplete="off" >
+        <span id="error"></span>
         
         </div>
 

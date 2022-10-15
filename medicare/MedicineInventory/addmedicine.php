@@ -77,7 +77,9 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
 
-    <title>Add Medicine Details</title>
+    
+  <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
   </head>
   <body>
     <!-- header -->
@@ -148,7 +150,7 @@ if(isset($_POST['submit'])){
         <div class="form-group">
         <label>Quantity:</label>
             <div class="in-row">
-                <input type="text" class="form-control side " placeholder="Amount" name="qamount" autocomplete="off" required>
+                <input type="number" min="0" class="form-control side " placeholder="Amount" name="qamount" autocomplete="off" required>
                 <select  class="form-control sside" name="package" required >
                     <option value="" disabled selected>Package type</option>
                     <option value="Vials">Vials</option>

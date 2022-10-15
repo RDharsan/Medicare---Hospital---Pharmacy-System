@@ -44,8 +44,8 @@ include '../connection/connect.php';
             height: 300px;
         } */
         .tbl{
-             width: 1250px!important;
-             margin-left: -60px!important;
+             width: 1450px!important;
+             margin-left: -190px!important;
         }
         .bb{
             /* border-color: #04AA6D!important; */
@@ -77,7 +77,9 @@ include '../connection/connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
+
+    <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">

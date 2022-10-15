@@ -67,7 +67,10 @@ include '../connection/connect.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
+
     <title>Medicare</title>
+  <link rel="icon" type="image/x-icon" href="../logo.jpg">
+    <script type="text/javascript" src="validations.js"></script>
 </head>
 <body>
 
