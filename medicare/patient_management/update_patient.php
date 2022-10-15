@@ -39,6 +39,42 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 
 <head>
+<script type="text/javascript">
+    function validate(){
+    
+    var nic = document.forms["myform"]["nic"].value;
+    if(nic.length<10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Invalid NIC Format</span>"
+        return false;
+    }
+
+    var t_phone = document.forms["myform"]["t_phone"].value;
+    if(isNaN(t_phone)){
+        document.getElementById("error1").innerHTML="<span style='color: red;'>"+"Only digits allowed for Phone number</span>"
+        return false;
+    }
+
+    else if(t_phone.length>10){
+        document.getElementById("error1").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(t_phone.length<10){
+        document.getElementById("error1").innerHTML="<span style='color: red;'>"+"Maximum limit is 10 digits</span>"
+        return false;
+    }
+
+    else if(t_phone.charAt(0)==9){
+        document.getElementById("error1").innerHTML="<span style='color: red;'>"+"Starting number 9 not allowed</span>"
+        return false;
+    }
+
+
+
+
+} 
+
+</script>  
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -72,7 +108,7 @@ if (isset($_POST['submit'])) {
     <button type="submit" class="btn btn-primary" style="background-color:#198754; margin-left:25px; margin-top:25px" onclick="location.href='view_patient.php'" name="back">Back</button><br>
     <div class="container my-5">
        
-        <form method="POST">
+        <form name="myform" onsubmit="return validate()" method="POST">
         <h1 style="margin-left:35% ;">Edit Patient Details</h1><br><br><br>
 
             <div class="row" style="margin-left:10%">
@@ -83,10 +119,11 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5" style="margin-bottom:30px ;">
                     <label>NIC</label>
                     <input type="text" class="form-control" placeholder="use capital V" name="nic" autocomplete="off" value="<?php echo $nic ?>" required>
+                    <span id="error"></span>
                 </div>
                 <div class="col-md-5"style="margin-bottom:30px ;">
                     <label>Gender</label>
-                    <select name="gender" id="Gender" class="form-control" value="<?php echo $gender ?>" required>
+                    <select name="gender" id="Gender"  required  class="form-control"value="<?php echo $gender ?>" >
                         <option disabled selected><?php echo $gender ?></option>
                         <option>Male</option>
                         <option>Female</option>
@@ -109,6 +146,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-md-5"style="margin-bottom:30px ;">
                         <label>Phone Number</label>
                         <input type="number" class="form-control" placeholder="Ex: +94 727373731" name="t_phone" autocomplete="off" value="<?php echo $t_phone ?>" required>
+                        <span id="error1"></span>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" style="background-color:#198754;margin-left:40%" name="submit">Update</button>

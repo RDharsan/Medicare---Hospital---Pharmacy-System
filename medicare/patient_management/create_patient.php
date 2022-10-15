@@ -106,7 +106,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-md-5">
                 <br><label>Gender</label>
-                    <select name="gender" id="gender" class="form-control" required>
+                    <select name="gender" id="gender"  required class="form-control" >
                         <option disabled selected> Choose Here </option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
