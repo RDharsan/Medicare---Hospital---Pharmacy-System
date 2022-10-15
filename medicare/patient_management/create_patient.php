@@ -49,6 +49,14 @@ if (isset($_POST['submit'])) {
         return false;
     }
 
+
+
+    var nic = document.forms["myform"]["nic"].value;
+    if(nic.length<10){
+        document.getElementById("error").innerHTML="<span style='color: red;'>"+"Invalid NIC Format</span>"
+        return false;
+    }
+
 } 
 
 </script> 
@@ -94,6 +102,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                 <br><label>NIC</label>
                     <input type="text" class="form-control" placeholder="Use capital V" name="nic"  required autocomplete="off" required>
+                    <span id="error"></span>
                 </div>
                 <div class="col-md-5">
                 <br><label>Gender</label>
@@ -118,7 +127,7 @@ if (isset($_POST['submit'])) {
                 <div class="col-md-5">
                 <br><label>Phone Number</label>
                     <input type="number" class="form-control" placeholder="Ex:0724705102" name="t_phone"  required autocomplete="off" required>
-                    <span id="error"></span>
+                     <span id="error"></span>
                 </div>
             </div>
                 <br>
