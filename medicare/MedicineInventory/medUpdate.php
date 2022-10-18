@@ -101,7 +101,7 @@ if(isset($_POST['submit'])){
             }else{
                 var ename = /^[a-zA-Z]*$/;
                 if(!ename.test(name)){
-                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine name cannot contain number</span>"
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine name cannot contain Digits</span>"
                     return false;
 
                 }

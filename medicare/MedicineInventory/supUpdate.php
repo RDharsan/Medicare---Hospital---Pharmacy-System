@@ -98,7 +98,7 @@ if(isset($_POST['submit'])){
             }else{
                 var ename = /^[a-zA-Z]*$/;
                 if(!ename.test(sname)){
-                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Number</span>"
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Digits</span>"
                     return false;
 
                 }
@@ -106,7 +106,7 @@ if(isset($_POST['submit'])){
 
             var phoneNo = document.forms["myform"]["phoneNo"].value;
             if (phoneNo=="") {
-                document.getElementById("errors").innerHTML = "<span  style='color: red;'><b>" + "*Please enter valid phone number</b></span>"
+                document.getElementById("errors").innerHTML = "<span  style='color: red;'><b>" + "*Please Enter Valid Phone Number</b></span>"
                 return false;
             } else if (phoneNo.length > 10) {
                 document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + " *Maximum limit is 10 digits</b></span>"

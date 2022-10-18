@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
             } else {
                 var ename = /^[a-zA-Z]*$/;
                 if (!ename.test(name)) {
-                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine Name Cannot Contain Number</span>"
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine Name Cannot Contain DIgits</span>"
                     return false;
 
                 }
@@ -108,7 +108,7 @@ if (isset($_POST['submit'])) {
             } else {
                 var ename = /^[a-zA-Z]*$/;
                 if (!ename.test(sname)) {
-                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Number</span>"
+                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Digits</span>"
                     return false;
 
                 }
