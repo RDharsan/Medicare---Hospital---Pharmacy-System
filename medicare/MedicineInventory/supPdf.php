@@ -3,9 +3,12 @@
     require('pdf/FPDF/fpdf.php');
     $pdf = new FPDF();
     $pdf->AddPage();
+    $pdf->SetFont("Arial", "B", 25);
+    $pdf->SetTextColor(25,135,84);
+    $pdf->Cell(185,10,'MEDICARE',"0","0",'C');
+    $pdf->Ln();
     $pdf->SetFont("Arial", "B", 16);
     $pdf->SetTextColor(252,3,3);
-   
     $pdf->Cell(185,20, "SUPPLIERS RECORD", "0", "1", "C");
 
 
