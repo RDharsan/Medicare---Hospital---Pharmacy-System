@@ -5,10 +5,11 @@
     $pdf->AddPage();
     $pdf->SetFont("Arial", "B", 16);
     $pdf->SetTextColor(252,3,3);
+   
     $pdf->Cell(185,20, "SUPPLIERS RECORD", "0", "1", "C");
 
 
-    $pdf->SetLeftMargin(58);
+    $pdf->SetLeftMargin(40);
     $pdf->SetTextColor(0,0,0);
     $pdf->SetFont("Arial", "B", 10);
 

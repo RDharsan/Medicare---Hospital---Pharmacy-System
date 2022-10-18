@@ -15,11 +15,21 @@
             document.getElementById("error").innerHTML="<span style='color: red;'><b>"+"Maximum limit is 10 digits</b></span>"
             return false;
         }
+
+        var name = document.forms["myform"]["name"].value;
+            if (name=="") {
+                document.getElementById("errorr").innerHTML = "<span style='color: red;'>" + "Please enter valid Patient Name!</span>"
+                return false;
+            }else{
+                var ename = /^[a-zA-Z]*$/;
+                if(!ename.test(name)){
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'>" + "Patient name cannot contain number!</span>"
+                    return false;
+
+                }
+            }
     
-        // else if(phoneNo.charAt(0)==9){
-        //     document.getElementById("error").innerHTML="<span style='color: red;'><b>"+"Starting number 9 not allowed!!!</b></span>"
-        //     return false;
-        // }
+        
     
       
     
@@ -57,9 +67,9 @@
     
     }
 
-    function msgdlt() {
+    // function msgdlt() {
 
-        alert("Details Deleted sucessfully!!");
-    }
+    //     alert("Details Deleted sucessfully!!");
+    // }
     
     

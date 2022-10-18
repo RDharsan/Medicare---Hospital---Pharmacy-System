@@ -92,6 +92,55 @@ if(isset($_POST['submit'])){
    
   <title>Medicare</title>
   <link rel="icon" type="image/x-icon" href="../logo.jpg">
+  <script>
+    function validate(){
+        var name = document.forms["myform"]["name"].value;
+            if (name=="") {
+                document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid Medicine Name</span>"
+                return false;
+            }else{
+                var ename = /^[a-zA-Z]*$/;
+                if(!ename.test(name)){
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine name cannot contain number</span>"
+                    return false;
+
+                }
+            }
+            var sname = document.forms["myform"]["sname"].value;
+            if (sname=="") {
+                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid Supplier Name</span>"
+                return false;
+            }else{
+                var ename = /^[a-zA-Z]*$/;
+                if(!ename.test(sname)){
+                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier name cannot contain number</span>"
+                    return false;
+
+                }
+            }
+
+            
+            var qamount = document.forms["myform"]["qamount"].value;
+            if (qamount == "") {
+                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Please enter quantity amount</b></span>"
+                return false;
+            } else if (isNaN(qamount)) {
+                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                return false;
+            }
+
+            var damount = document.forms["myform"]["damount"].value;
+            if (damount == "") {
+                document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Please enter quantity amount</b></span>"
+                return false;
+            } else {
+                if (isNaN(damount)) {
+                    document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                    return false;
+                }
+            }
+    }
+  </script>
   </head>
   <body>
     <!-- header -->
@@ -118,7 +167,7 @@ if(isset($_POST['submit'])){
   
     <div class="container">
     
-    <form method="post">
+    <form method="post" onsubmit="return validate()" name="myform">
     <div class="row">
     <div class="col" >
         <div class="form-group">
@@ -172,7 +221,8 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
             <label >Medicine Name:</label>
-            <input type="text" value=<?php echo $medicineName;?> class="form-control" placeholder="Type Medicine Name" autocomplete="off" name="name" required/>
+            <input type="text" value=<?php echo $medicineName;?> class="form-control" placeholder="Type Medicine Name" autocomplete="off" name="name"/>
+                    <span id="errorr"></span>
         </div>
 
         <div class="form-group">
@@ -193,13 +243,14 @@ if(isset($_POST['submit'])){
     <div class="col">
         <div class="form-group">
             <label >Supplier Name:</label>
-            <input type="text" class="form-control" value=<?php echo $supplierName;?> placeholder="Type Supplier Name" name="sname" autocomplete="off" required>
+            <input type="text" class="form-control" value=<?php echo $supplierName;?> placeholder="Type Supplier Name" name="sname" autocomplete="off">
+            <span id="errors"></span>
         </div>
 
         <div class="form-group">
-        <label>Quantity:</label>
+        <label>Quantity: <span id="error2"></span></label>
             <div class="in-row">
-                <input type="text" class="form-control side " placeholder="Amount" value=<?php echo $quantityAmount;?> name="qamount" autocomplete="off" required>
+                <input type="text" class="form-control side " placeholder="Amount" value=<?php echo $quantityAmount;?> name="qamount" autocomplete="off" >
                 <select class="form-control sside" name="package" required>
                     <option value="" disabled selected >Package</option>
                     <option value="Vials"
@@ -249,9 +300,9 @@ if(isset($_POST['submit'])){
         </div>
 
         <div class="form-group">
-            <label>Dosage:</label>
+            <label>Dosage: <span id="error3"></span></label>
             <div class="in-row">
-                <input type="text" class="form-control side" placeholder="Amount" autocomplete="off" value=<?php echo $dosageAmount;?> name="damount" required>
+                <input type="text" class="form-control side" placeholder="Amount" autocomplete="off" value=<?php echo $dosageAmount;?> name="damount" >
                 <select  class="form-control sside" name="units" required>
                     <option value="" disabled selected>Units</option>
                     <option value="l" 

@@ -89,6 +89,35 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="secondNav.css">
+    <script>
+    function validate(){
+        var sname = document.forms["myform"]["sname"].value;
+            if (sname=="") {
+                document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid Supplier Name</span>"
+                return false;
+            }else{
+                var ename = /^[a-zA-Z]*$/;
+                if(!ename.test(sname)){
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Supplier name cannot contain number</span>"
+                    return false;
+
+                }
+            }
+
+            var phoneNo = document.forms["myform"]["phoneNo"].value;
+            if (phoneNo=="") {
+                document.getElementById("errors").innerHTML = "<span  style='color: red;'><b>" + "*Please enter valid phone number</b></span>"
+                return false;
+            } else if (phoneNo.length > 10) {
+                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + " *Maximum limit is 10 digits</b></span>"
+                return false;
+            } else if (phoneNo.length < 10) {
+                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + " *Maximum limit is 10 digits</b></span>"
+                return false;
+            }
+           
+    }
+  </script>
 
 
     <title>Medicare</title>
@@ -121,17 +150,19 @@ if(isset($_POST['submit'])){
   <div class="container">
     
 
-    <form method="post">
+    <form method="post" name="myform" onsubmit="return validate()">
     <div class="col side" >
         
         <div class="form-group">
             <label >Supplier Name:</label>
             <input type="text" class="form-control" value=<?php echo $supplierName;?> placeholder="Type Supplier Name" name="sname"/>
+        <span id="errorr"></span>
         </div>
 
         <div class="form-group">
             <label >Address:</label>
             <input type="text" value=<?php echo $address;?> class="form-control" placeholder="Type Address" name="address"/>
+            
         </div>
 
         
@@ -139,16 +170,17 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
         <label>Phone No:</label>
-            <div class="in-row">
-                <input type="text" class="form-control " value=<?php echo $phoneNo;?> placeholder="   X X X   X X X X   X X X " name="phoneNo">
+            <!-- <div class="in-row"> -->
+                <input type="text" class="form-control " value=<?php echo $phoneNo;?> placeholder="   X X X   X X X X   X X X " name="phoneNo"/>
+                <span id="errors"></span>
             </div>
         </div>
 
         
     
-    </div>
+    </div><br>
     <div class="bn">
-        <button name="submit" type="submit" style="background-color:#198754; color:white" class="btn button2">Submit</button><button type="reset" class="btn button3" style="background-color:#198754; color:white" name="reset">Reset</button>
+        <button name="submit" type="submit" style="margin-left: 23% ;background-color:#198754; color:white" class="btn button2">Submit</button><button type="reset" class="btn button3" style="background-color:#198754; color:white" name="reset">Reset</button>
     </div>
     
     </form> 
