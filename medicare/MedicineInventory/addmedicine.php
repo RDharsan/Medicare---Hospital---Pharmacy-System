@@ -91,24 +91,24 @@ if (isset($_POST['submit'])) {
         function validate() {
             var name = document.forms["myform"]["name"].value;
             if (name == "") {
-                document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid Medicine Name</span>"
+                document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Please Enter Valid Medicine Name</span>"
                 return false;
             } else {
                 var ename = /^[a-zA-Z]*$/;
                 if (!ename.test(name)) {
-                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine name cannot contain number</span>"
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Medicine Name Cannot Contain Number</span>"
                     return false;
 
                 }
             }
             var sname = document.forms["myform"]["sname"].value;
             if (sname == "") {
-                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid Supplier Name</span>"
+                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Please Enter Valid Supplier Name</span>"
                 return false;
             } else {
                 var ename = /^[a-zA-Z]*$/;
                 if (!ename.test(sname)) {
-                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier name cannot contain number</span>"
+                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Number</span>"
                     return false;
 
                 }
@@ -119,20 +119,20 @@ if (isset($_POST['submit'])) {
 
             var qamount = document.forms["myform"]["qamount"].value;
             if (qamount == "") {
-                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Please enter quantity amount</b></span>"
+                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Please Enter Quantity Amount</b></span>"
                 return false;
             } else if (isNaN(qamount)) {
-                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are Allowed</b></span>"
                 return false;
             }
 
             var damount = document.forms["myform"]["damount"].value;
             if (damount == "") {
-                document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Please enter quantity amount</b></span>"
+                document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Please Enter Quantity Amount</b></span>"
                 return false;
             } else {
                 if (isNaN(damount)) {
-                    document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                    document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are Allowed</b></span>"
                     return false;
                 }
             }

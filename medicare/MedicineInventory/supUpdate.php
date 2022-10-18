@@ -93,12 +93,12 @@ if(isset($_POST['submit'])){
     function validate(){
         var sname = document.forms["myform"]["sname"].value;
             if (sname=="") {
-                document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid Supplier Name</span>"
+                document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Please Enter Valid Supplier Name</span>"
                 return false;
             }else{
                 var ename = /^[a-zA-Z]*$/;
                 if(!ename.test(sname)){
-                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Supplier name cannot contain number</span>"
+                    document.getElementById("errorr").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Number</span>"
                     return false;
 
                 }
