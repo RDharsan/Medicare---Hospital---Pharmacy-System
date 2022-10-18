@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<!doctype html> 
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -35,7 +35,109 @@ if (isset($_POST['submit'])) {
 
     <title>Medicare</title>
     <link rel="icon" type="image/x-icon" href="../logo.jpg">
-    <script type="text/javascript" src="index.js"></script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+
+    <script>
+        function validatemedical2() {
+
+            var test_type = document.forms["myform"]["test_type"].value;
+            if (test_type == "") {
+                alert("please enter valid Test Type name!!");
+                document.getElementById("errorType").innerHTML = "<span style='color: red;'><b>" + "*Please enter/select valid Test Type!!</span>"
+                return false;
+            } else {
+                var ename = /^[a-zA-Z ]*$/;
+                if (!ename.test(test_type)) {
+                    alert('Test Type cannot be a number!!!');
+                    document.getElementById("errorType").innerHTML = "<span style='color: red;'><b>" + "*Test Type cannot be a number!!!</span>"
+                    return false;
+                }
+            }
+
+            var lab_room = document.forms["myform"]["lab_room"].value;
+            // if (lab_room == "") {
+            //     alert("Please enter the valid lab_room number!!");
+            //     document.getElementById("errorLab").innerHTML = "<span style='color: red;'>" + "*Please enter valid Lab room number!!</span>"
+
+            //     return false;
+            // }
+            if (lab_room == "") {
+                document.getElementById("errorLab").innerHTML = "<span  style='color: red;'><b>" + "*Please enter Lab room number</b></span>"
+                return false;
+            } else if (isNaN(lab_room)) {
+                alert("Only Digits are allowed!!")
+                document.getElementById("errorLab").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                return false;
+            }
+
+
+            var lab_incharge = document.forms["myform"]["lab_incharge"].value;
+            if (lab_incharge == "") {
+                alert("please enter/select valid doctor name!!");
+                document.getElementById("errorIn").innerHTML = "<span style='color: red;'><b>" + "*please enter/select valid doctor name!!</span>"
+                return false;
+            } else {
+                var ename = /^[a-zA-Z ]*$/;
+                ename.trim();
+                if (!ename.test(lab_incharge)) {
+                    alert('In-charge name cannot be a number!!!');
+                    document.getElementById("errorIn").innerHTML = "<span style='color: red;'><b>" + "*In-Charge name cannot be a number!!!</span>"
+                    return false;
+                }
+            }
+
+            var nurse = document.forms["myform"]["nurse"].value;
+            if (nurse == "") {
+                alert("please enter/select valid nurse name!!");
+                document.getElementById("errorNurse").innerHTML = "<span style='color: red;'><b>" + "*please enter/select valid nurse name!!</span>"
+                return false;
+            } else {
+                var ename = /^[a-zA-Z ]*$/;
+             
+                if (!ename.test(nurse)) {
+                    alert('Nurse name cannot be a number!!!');
+                    document.getElementById("errorNurse").innerHTML = "<span style='color: red;'><b>" + "*Nurse name cannot be a number!!!</span>"
+                    return false;
+                }
+            }
+
+            var test_doneby = document.forms["myform"]["test_doneby"].value;
+            if (test_doneby == "") {
+                alert("please enter/select valid doctor name!!");
+                document.getElementById("errorDoneBy").innerHTML = "<span style='color: red;'><b>" + "*please enter/select valid doctor name!!</span>"
+                return false;
+            } else {
+                var ename = /^[a-zA-Z ]*$/;
+             
+                if (!ename.test(test_doneby)) {
+                    alert('Name cannot be a number!!!');
+                    document.getElementById("errorDoneBy").innerHTML = "<span style='color: red;'><b>" + "*Name cannot be a number!!!</span>"
+                    return false;
+                }
+            }
+
+            var test_date = document.forms["myform"]["test_date"].value;
+            if (test_date == "") {
+                alert("Please select the valid date!!");
+                document.getElementById("errorDate").innerHTML = "<span style='color: red;'><b>" + "*Please enter valid date!!</span>"
+                return false;
+            }
+
+            var submit = document.forms["myform"]["submit"].value;
+            if (submit == "") {
+                alert("Details added sucessfully!!")
+
+            }
+
+
+            if (select == "") {
+                alert("Please select a selection");
+                return false;
+
+
+            }
+        }
+    </script>
 
 
 
@@ -66,7 +168,7 @@ if (isset($_POST['submit'])) {
 
 
     <div class="container my-5">
-        <form method="POST" name="myform" onsubmit="return validatemedical()">
+        <form method="POST" name="myform" onsubmit="return validatemedical2()">
             <h1 style="margin-left:35% ;">Add Medical Test</h1><br><br><br>
             <!-- <div class="form-group">  -->
             <div class="row" style="margin-left:10%">
@@ -87,8 +189,8 @@ if (isset($_POST['submit'])) {
                         <option>Cholesterol level tests</option>
                     </select> -->
 
-                    <input type="text" class="form-control" name="test_type" list="testType" autocomplete="off" placeholder="Enter/select test type">
-                    <datalist id="testType" name="test_type">
+                    <input type="text" class="form-control" name="test_type" list="testType" autocomplete="off" placeholder="Enter/select test type" >
+                    <datalist id="testType" name="test_type" >
                         <option disabled selected>Choose here</option>
                         <option>BUN</option>
                         <option>Blood Test</option>
@@ -108,7 +210,7 @@ if (isset($_POST['submit'])) {
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Lab room number:</label>
-                    <input type="number" class="form-control" min=0 max=100 placeholder="Enter lab room No" name="lab_room" id="lab_room" autocomplete="off">
+                    <input type="text" class="form-control"  placeholder="Enter lab room No" name="lab_room" id="lab_room" autocomplete="off">
                     <span id="errorLab"></span>
                     <br>
                 </div>
@@ -195,7 +297,7 @@ if (isset($_POST['submit'])) {
                     ?>
                     <input type="text" class="form-control" name="test_doneby" list="test_doneby" autocomplete="off" placeholder="Enter/select test done doctor Name">
 
-                    <datalist name="test_doneby"  id="test_doneby">
+                    <datalist name="test_doneby" id="test_doneby">
                         <option disabled selected>Choose here</option>
                         <?php
                         while ($row1 = mysqli_fetch_array($result1)) {
@@ -215,7 +317,7 @@ if (isset($_POST['submit'])) {
                 <!-- <div class="form-group"> -->
                 <div class="col-md-5">
                     <label>Test done date:</label>
-                    <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" id="test_date">
+                    <input type="date" class="form-control" placeholder="Enter test date" name="test_date" autocomplete="off" id="test_date" required>
                     <span id="errorDate"></span>
                     <br>
                 </div>

@@ -125,7 +125,9 @@ include '../connection/connect.php';
             <div class="col-md-3"></div>
         </div>
         
-    </div><br>
+    </div>
+    <br>
+    
     <?php
     include('footer.php');
   ?>

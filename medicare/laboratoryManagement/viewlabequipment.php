@@ -25,6 +25,19 @@ include '../connection/connect.php';
 
   <!-- Js validation - trying -->
   <script src="custom.js"></script>
+  <script>
+
+function myFunction() {
+        var r = confirm("Are you sure you want to delete?");
+        if (r == false) {
+           return false;
+        } else{
+            return true;
+        }
+    
+    }
+  </script>
+
 
   <title>Medicare</title>
   <link rel="icon" type="image/x-icon" href="../logo.jpg">
@@ -95,7 +108,7 @@ include '../connection/connect.php';
         <td>
         
     <button class="btn btn-primary" style="background-color:#198754"><a href="updatelabequipment.php?updateid=' . $equipment_id . '" class="text-light">Update</a></button></td>
-    <td><button class="btn btn-danger""  onclick="msgdlt()""><a href="deletelabequipment.php?deleteid=' . $equipment_id . '" class="text-light">Delete</a></button>
+    <td><button class="btn btn-danger"" ><a href="deletelabequipment.php?deleteid=' . $equipment_id . '"  onclick="return myFunction()"class="text-light">Delete</a></button>
 
      </td>
       </tr>';

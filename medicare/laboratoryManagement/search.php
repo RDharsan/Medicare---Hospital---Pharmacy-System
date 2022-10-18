@@ -26,97 +26,97 @@ include '../connection/connect.php';
 </head>
 
 <body>
-        <!-- header -->
-        <?php
-    include('header.php');
-    ?>
+  <!-- header -->
+  <?php
+  include('header.php');
+  ?>
 
-    <!-- second navigation bar -->
-    <div>
+  <!-- second navigation bar -->
+  <div>
     <ul class="secondNav">
-        <li><a href="addmedicaltest.php" class="list" >Add Medical Test</a></li>
-        <li><a href="viewmedicaltest.php" class="list" >View Test</a></li>
-        <li><a href="index.php" class="list" >Report</a></li>
-        <li><a href="search.php" class="list" id="active" style="color:white">Search Lab</a></li>
-        <li><a href="viewlabequipment.php" class="list">Lab Equipement Details</a></li>
+      <li><a href="addmedicaltest.php" class="list">Add Medical Test</a></li>
+      <li><a href="viewmedicaltest.php" class="list">View Test</a></li>
+      <li><a href="index.php" class="list">Report</a></li>
+      <li><a href="search.php" class="list" id="active" style="color:white">Search Lab</a></li>
+      <li><a href="viewlabequipment.php" class="list">Lab Equipement Details</a></li>
     </ul>
 
-</div>
-<br>
-    <div class="container my-5" >
-        <form action="" method="POST">
-            <div class="form-group" style="margin-left:37%">
-            <!-- <input class="form-control-lg" type="text" placeholder="Search Test type" name="search"> -->
-            <div class="col-md-5">
-                    
-                    <!-- <input type="text" class="form-control" placeholder="Enter test tyoe" name="test_type" autocomplete="off"> -->
-                    <select name="search" required class="form-control">
-                        <option selected>Search Test Type</option>
-                        <option>BUN</option>
-                        <option>Blood Test</option>
-                        <option>Infectious disease tests</option>
-                        <option>Sexually transmitted infection tests</option>
-                        <option>Tumor and cancer marker tests</option>
-                        <option>ANA</option>
-                        <option>CRP</option>
-                        <option>Nutrient and vitamin level tests</option>
-                        <option>Hormone level tests</option>
-                        <option>Cholesterol level tests</option>
-                    </select>
-                    <br>
-               
-            <button class="btn btn-primary btn-lg" style="background-color:#198754;margin-left:30%" name="submit" >Search</button>
-            </div>
+  </div>
+  <br>
+  <div class="container my-5">
+    <form action="" method="POST">
+      <div class="form-group" style="margin-left:37%">
+        <!-- <input class="form-control-lg" type="text" placeholder="Search Test type" name="search"> -->
+        <div class="col-md-5">
+
+          <!-- <input type="text" class="form-control" placeholder="Enter test tyoe" name="test_type" autocomplete="off"> -->
+          <select name="search" required class="form-control">
+            <option selected>Search Test Type</option>
+            <option>BUN</option>
+            <option>Blood Test</option>
+            <option>Infectious disease tests</option>
+            <option>Sexually transmitted infection tests</option>
+            <option>Tumor and cancer marker tests</option>
+            <option>ANA</option>
+            <option>CRP</option>
+            <option>Nutrient and vitamin level tests</option>
+            <option>Hormone level tests</option>
+            <option>Cholesterol level tests</option>
+          </select>
+          <br>
+
+          <button class="btn btn-primary btn-lg" style="background-color:#198754;margin-left:30%" name="submit">Search</button>
         </div>
-        </form>
-        <br><br>
+      </div>
+    </form>
+    <br><br>
 
-        <div class="container">
+    <div class="container">
 
 
-<table class="table">
-  <thead>
-    <h1 style="text-align: center;"><?php  
-        if(isset($_POST['submit'])){
-        $search=$_POST['search'];
-        echo $search;
-        }
-        
-    ?></h1><br>
-    <tr style="background-color:#198754;color:white;">
-      <th scope="col">Test ID</th>
-      <th scope="col">Lab room</th>
-      <th scope="col">Lab in-charge</th>
-      <th scope="col">Nurse</th>
-      <th scope="col">Test done by</th>
-      <th scope="col">Test done date</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
-    </tr>
-  </thead>
-  <tbody>
+      <table class="table">
+        <thead>
+          <h1 style="text-align: center;"><?php
+                                          if (isset($_POST['submit'])) {
+                                            $search = $_POST['search'];
+                                            echo $search;
+                                          }
 
-    <?php
-    if (isset($_POST['submit'])) {
-    $search=$_POST['search'];
+                                          ?></h1><br>
+          <tr style="background-color:#198754;color:white;">
+            <th scope="col">Test ID</th>
+            <th scope="col">Lab room</th>
+            <th scope="col">Lab in-charge</th>
+            <th scope="col">Nurse</th>
+            <th scope="col">Test done by</th>
+            <th scope="col">Test done date</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
 
-    $sql = "select * from `medicaltest` where test_id='$search' or test_type='$search'";
-    $result = mysqli_query($con, $sql);
+          <?php
+          if (isset($_POST['submit'])) {
+            $search = $_POST['search'];
 
-    if ($result) {
-        if(mysqli_num_rows($result)>0){
-        
+            $sql = "select * from `medicaltest` where test_id='$search' or test_type='$search'";
+            $result = mysqli_query($con, $sql);
 
-      while ($row = mysqli_fetch_assoc($result)) {
-        $test_id = $row['test_id'];
-        // $test_type = $row['test_type'];
-        $lab_room = $row['lab_room'];
-        $lab_incharge = $row['lab_incharge'];
-        $nurse = $row['nurse'];
-        $test_doneby = $row['test_doneby'];
-        $test_date = $row['test_date'];
+            if ($result) {
+              if (mysqli_num_rows($result) > 0) {
 
-        echo  '<tr>
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                  $test_id = $row['test_id'];
+                  // $test_type = $row['test_type'];
+                  $lab_room = $row['lab_room'];
+                  $lab_incharge = $row['lab_incharge'];
+                  $nurse = $row['nurse'];
+                  $test_doneby = $row['test_doneby'];
+                  $test_date = $row['test_date'];
+
+                  echo  '<tr>
   <th scope="row">' . $test_id . '</th>
  
   <td>' . $lab_room . '</td>
@@ -131,34 +131,31 @@ include '../connection/connect.php';
 
 </td>
 </tr>';
-      }
-      }
-     
-      else{
-        ?>
-       
-        <h2 style="text-align: center; color:red"> <?php
-        echo 'Data Not Found!!';
-        echo "<script>alert('Data Not found!!')</script>";
-        
-      }
-    }
-}
-    ?>
+                }
+              } else {
+          ?>
+
+                <h2 style="text-align: center; color:red"> <?php
+                                                            echo 'Data Not Found!!';
+                                                            echo "<script>alert('Data Not found!!')</script>";
+                                                          }
+                                                        }
+                                                      }
+                                                            ?>
 
 
 
 
-  </tbody>
-</table>
-</div>
-        
+        </tbody>
+      </table>
     </div>
 
+  </div>
 
- <!-- Footer -->
- <?php
-    include('footer.php');
+
+  <!-- Footer -->
+  <?php
+  include('footer.php');
   ?>
 </body>
 

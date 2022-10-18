@@ -20,6 +20,19 @@ include '../connection/connect.php';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="secondNav.css">
+  <script type="text/javascript" src="index.js"></script>
+  <script>
+    function myFunction() {
+        var r = confirm("Are you sure you want to delete?");
+        if (r == false) {
+           return false;
+        } else{
+            return true;
+        }
+    
+    }
+  </script>
+  </script>
 
   <title>Medicare</title>
   <link rel="icon" type="image/x-icon" href="../logo.jpg">
@@ -91,7 +104,7 @@ include '../connection/connect.php';
         <td>
         
     <button class="btn btn-primary" style="background-color:#198754"><a href="updatemedicaltest.php?updateid=' . $test_id . '" class="text-light">Update</a></button></td>
-    <td><button class="btn btn-danger" " onclick="msgdlt()" ><a href="deletemedicaltest.php?deleteid=' . $test_id . '" class="text-light" >Delete</a></button>
+    <td><button class="btn btn-danger" " onclick="return myFunction()" ><a href="deletemedicaltest.php?deleteid=' . $test_id . '" class="text-light" >Delete</a></button>
 
       </tr>';
             }
