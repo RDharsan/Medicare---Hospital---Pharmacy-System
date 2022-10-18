@@ -113,7 +113,7 @@ if(isset($_POST['submit'])){
             }else{
                 var ename = /^[a-zA-Z]*$/;
                 if(!ename.test(sname)){
-                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier name cannot contain number</span>"
+                    document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "*Supplier Name Cannot Contain Digits</span>"
                     return false;
 
                 }
@@ -122,20 +122,20 @@ if(isset($_POST['submit'])){
             
             var qamount = document.forms["myform"]["qamount"].value;
             if (qamount == "") {
-                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Please enter quantity amount</b></span>"
+                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Please Enter Quantity Amount</b></span>"
                 return false;
             } else if (isNaN(qamount)) {
-                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                document.getElementById("error2").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are Allowed</b></span>"
                 return false;
             }
 
             var damount = document.forms["myform"]["damount"].value;
             if (damount == "") {
-                document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Please enter quantity amount</b></span>"
+                document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Please Enter Quantity Amount</b></span>"
                 return false;
             } else {
                 if (isNaN(damount)) {
-                    document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are allowed</b></span>"
+                    document.getElementById("error3").innerHTML = "<span  style='color: red;'><b>" + "*Only Digits are Allowed</b></span>"
                     return false;
                 }
             }

@@ -161,7 +161,7 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
             <label >Address:</label>
-            <input type="text" value=<?php echo $address;?> class="form-control" placeholder="Type Address" name="address"/>
+            <input type="text" value=<?php echo $address;?> class="form-control" placeholder="Type Supplier Address" name="address"/>
             
         </div>
 

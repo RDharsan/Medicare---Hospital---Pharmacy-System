@@ -104,10 +104,10 @@ if (isset($_POST['submit'])) {
                 document.getElementById("errors").innerHTML = "<span  style='color: red;'><b>" + "*Please Enter Valid Phone Number</b></span>"
                 return false;
             } else if (phoneNo.length > 10) {
-                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "Maximum limit is 10 digits</b></span>"
+                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "Maximum limit is 10 Digits</b></span>"
                 return false;
             } else if (phoneNo.length < 10) {
-                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "Maximum limit is 10 digits</b></span>"
+                document.getElementById("errors").innerHTML = "<span style='color: red;'><b>" + "Maximum limit is 10 Digits</b></span>"
                 return false;
             }
 
@@ -152,7 +152,7 @@ if (isset($_POST['submit'])) {
 
                 <div class="form-group">
                     <label>Address:</label>
-                    <input type="text" class="form-control" placeholder="Type Address" name="address" autocomplete="off" required />
+                    <input type="text" class="form-control" placeholder="Type Supplier Address" name="address" autocomplete="off" required />
                 </div>
 
 
