@@ -3,9 +3,9 @@ Group ID: SER057
 Project Name: Medicare - We care always(Hospital management system)
 
 **Members:**
-IT20003982 - Dharsan.R
-IT19980928 - Krishanthini.M
-IT20001452 - Traveena.C
+IT20003982 - Dharsan.R,
+IT19980928 - Krishanthini.M,
+IT20001452 - Traveena.C,
 IT20068196 - Anubama.L
 
 **Project Description**
